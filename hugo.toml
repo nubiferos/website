@@ -1,0 +1,73 @@
+baseURL = "https://nubiferos.org/"
+title = "NubiferOS"
+theme = "docsy"
+languageCode = "en-us"
+enableGitInfo = true
+
+# Syntax highlighting
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    lineNumbersInTable = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "The Cloud Engineer's Workstation - Secure multi-account cloud management"
+  copyright = "NubiferOS Contributors"
+  github_repo = "https://github.com/nubiferos/nubiferos"
+  github_project_repo = "https://github.com/nubiferos/nubiferos"
+  
+  # Brand colors
+  # Primary Deep Blue: #1E3A8A
+  # Secondary Silver/Gray: #94A3B8
+  # Accent Gold: #F59E0B
+  
+  [params.ui]
+    breadcrumb_disable = false
+    sidebar_menu_compact = true
+    sidebar_menu_foldable = true
+    showLightDarkModeMenu = true
+    
+  [params.ui.feedback]
+    enable = true
+    yes = 'Glad to hear it!'
+    no = 'Sorry to hear that. Please tell us how we can improve.'
+
+  [params.links]
+    [[params.links.user]]
+      name = "GitHub"
+      url = "https://github.com/nubiferos/nubiferos"
+      icon = "fab fa-github"
+      desc = "Source code and issues"
+    [[params.links.user]]
+      name = "Discord"
+      url = "https://discord.gg/nubiferos"
+      icon = "fab fa-discord"
+      desc = "Chat with the community"
+
+# Main navigation menu
+[menu]
+  [[menu.main]]
+    name = "Download"
+    weight = 10
+    url = "/download/"
+  [[menu.main]]
+    name = "Documentation"
+    weight = 20
+    url = "/docs/"
+  [[menu.main]]
+    name = "About"
+    weight = 30
+    url = "/about/"
+  [[menu.main]]
+    name = "Community"
+    weight = 40
+    url = "/community/"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.110.0"
