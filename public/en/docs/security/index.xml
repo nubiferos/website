@@ -1,11 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Security on NubiferOS</title>
-    <link>https://nubiferos.org/en/docs/security/</link>
-    <description>Recent content in Security on NubiferOS</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://nubiferos.org/en/docs/security/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on NubiferOS</title><link>https://nubiferos.org/en/docs/security/</link><description>Recent content in Security on NubiferOS</description><generator>Hugo</generator><language>en</language><atom:link href="https://nubiferos.org/en/docs/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Threat Model</title><link>https://nubiferos.org/en/docs/security/threat-model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/threat-model/</guid><description>&lt;p>NubiferOS publishes its threat model so you can make informed decisions about your security requirements. Most operating systems make vague security claims—we tell you exactly what we protect against and what we don&amp;rsquo;t.&lt;/p>
+&lt;h2 id="why-a-public-threat-model">Why a Public Threat Model?&lt;/h2>
+&lt;p>Security through obscurity doesn&amp;rsquo;t work. By publishing our threat model, we:&lt;/p>
+&lt;ul>
+&lt;li>Help you assess if NubiferOS meets your security requirements&lt;/li>
+&lt;li>Enable security researchers to identify gaps&lt;/li>
+&lt;li>Build trust through transparency&lt;/li>
+&lt;li>Set clear expectations for users&lt;/li>
+&lt;/ul>
+&lt;h2 id="user-persona">User Persona&lt;/h2>
+&lt;p>&lt;strong>Primary User&lt;/strong>: Cloud Engineer / DevOps Professional&lt;/p></description></item><item><title>Disk Encryption</title><link>https://nubiferos.org/en/docs/security/disk-encryption/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/disk-encryption/</guid><description>&lt;p>NubiferOS uses LUKS (Linux Unified Key Setup) for full disk encryption. This page explains the current implementation, why encryption matters, and planned improvements.&lt;/p>
+&lt;h2 id="current-implementation-v10">Current Implementation (v1.0)&lt;/h2>
+&lt;h3 id="luks1-everywhere">LUKS1 Everywhere&lt;/h3>
+&lt;p>NubiferOS Alpha uses LUKS1 for simplicity:&lt;/p>
+&lt;ul>
+&lt;li>Single passphrase at boot&lt;/li>
+&lt;li>AES-256-XTS encryption&lt;/li>
+&lt;li>Mandatory for all installations&lt;/li>
+&lt;li>Works on all hardware&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Boot process:&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>Power on → GRUB loads&lt;/li>
+&lt;li>Enter LUKS passphrase&lt;/li>
+&lt;li>Disk decrypts → System boots&lt;/li>
+&lt;li>Login with user password&lt;/li>
+&lt;/ol>
+&lt;h3 id="why-encryption-is-mandatory">Why Encryption is Mandatory&lt;/h3>
+&lt;p>For a cloud engineer workstation, disk encryption isn&amp;rsquo;t optional:&lt;/p></description></item><item><title>Credential Security</title><link>https://nubiferos.org/en/docs/security/credential-security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/credential-security/</guid><description>&lt;p>NubiferOS provides multi-layer credential protection using battle-tested tools rather than custom encryption. Your credentials are protected at rest and automatically injected into cloud CLIs when needed.&lt;/p>
+&lt;h2 id="why-secure-credential-management">Why Secure Credential Management?&lt;/h2>
+&lt;p>Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:&lt;/p>
+&lt;ul>
+&lt;li>Unauthorized resource creation (cryptomining)&lt;/li>
+&lt;li>Data exfiltration&lt;/li>
+&lt;li>Infrastructure destruction&lt;/li>
+&lt;li>Massive cloud bills&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Common credential mistakes:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Storing credentials in plaintext &lt;code>~/.aws/credentials&lt;/code>&lt;/li>
+&lt;li>Exposing credentials in environment variables (visible in &lt;code>/proc&lt;/code>)&lt;/li>
+&lt;li>Committing credentials to git repositories&lt;/li>
+&lt;li>Sharing credentials via Slack or email&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>NubiferOS solves this by:&lt;/strong>&lt;/p></description></item><item><title>Workspace Isolation</title><link>https://nubiferos.org/en/docs/security/workspace-isolation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/workspace-isolation/</guid><description>&lt;p>Workspace isolation is NubiferOS&amp;rsquo;s core defense against cross-account mistakes and credential leakage. Each workspace runs in an isolated sandbox using Linux namespaces, ensuring credentials from one cloud account are invisible to another.&lt;/p>
+&lt;h2 id="why-workspace-isolation">Why Workspace Isolation?&lt;/h2>
+&lt;p>Cloud engineers face a critical security challenge: managing multiple cloud accounts without accidentally leaking credentials between them.&lt;/p>
+&lt;p>&lt;strong>The risks are real:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Malware in one workspace stealing credentials from another&lt;/li>
+&lt;li>Browser extensions reading AWS credentials from disk&lt;/li>
+&lt;li>Accidental credential exposure via environment variables&lt;/li>
+&lt;li>Cross-account operations due to credential confusion&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Workspace isolation solves this by:&lt;/strong>&lt;/p></description></item></channel></rss>

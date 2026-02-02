@@ -1,0 +1,717 @@
+// NubiferOS Custom Styles
+// Inspired by Kali Linux, Ubuntu, Kubernetes, and Debian
+// With full Light/Dark mode support
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ============================================
+// CSS VARIABLES FOR THEMING
+// ============================================
+:root {
+  // Light mode (default)
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --code-bg: #f1f5f9;
+  --code-text: #1E3A8A;
+  --pre-bg: #1e293b;
+  --pre-text: #e2e8f0;
+  --sidebar-bg: #f8fafc;
+  --table-hover: #f8fafc;
+}
+
+// Dark mode
+[data-bs-theme="dark"],
+.td-offline--dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --code-bg: #334155;
+  --code-text: #F59E0B;
+  --pre-bg: #0f172a;
+  --pre-text: #e2e8f0;
+  --sidebar-bg: #1e293b;
+  --table-hover: #334155;
+}
+
+// ============================================
+// BASE TYPOGRAPHY & RESET
+// ============================================
+html {
+  font-size: 18px; // Increased from 16px for better accessibility on high-DPI displays
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+// ============================================
+// NAVBAR - Clean like Kubernetes/Ubuntu
+// ============================================
+.td-navbar {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.75rem 1.5rem;
+  
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    
+    img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}
+
+// Fix for content being hidden under fixed navbar
+.td-main main {
+  padding-top: 2rem;
+  
+  @media (min-width: 768px) {
+    padding-top: 5.5rem;
+  }
+}
+
+// Standalone pages (download, about, community, etc.) need extra top padding
+.td-default main {
+  padding-top: 6rem !important;
+  
+  @media (min-width: 768px) {
+    padding-top: 8rem !important;
+  }
+}
+
+// ============================================
+// HERO SECTION - Kali-inspired gradient
+// ============================================
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1E3A8A 50%, #3730a3 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+}
+
+.hero-logo {
+  max-width: 280px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  font-weight: 400;
+  opacity: 0.9;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+// ============================================
+// BUTTONS - Ubuntu-style prominent CTAs
+// ============================================
+.btn {
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  
+  &-primary {
+    background: #F59E0B !important;
+    border-color: #F59E0B !important;
+    color: #000 !important;
+    
+    &:hover {
+      background: #D97706 !important;
+      border-color: #D97706 !important;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+    }
+  }
+  
+  &-warning {
+    background: #F59E0B !important;
+    border-color: #F59E0B !important;
+    color: #000 !important;
+    
+    &:hover {
+      background: #D97706 !important;
+      border-color: #D97706 !important;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+    }
+  }
+  
+  &-outline-light {
+    border-width: 2px;
+    backdrop-filter: blur(4px);
+    
+    &:hover {
+      background: rgba(255,255,255,0.15) !important;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ============================================
+// FEATURE CARDS - With dark mode support
+// ============================================
+.feature-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #F59E0B;
+  }
+  
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #1E3A8A 0%, #3730a3 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    
+    i {
+      font-size: 1.75rem;
+      color: #fff;
+    }
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+// ============================================
+// SECTION STYLING - With dark mode support
+// ============================================
+.section-light {
+  background: var(--bg-secondary);
+}
+
+.section-dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 100%);
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// ============================================
+// HOW IT WORKS - Step indicators
+// ============================================
+.step-card {
+  text-align: center;
+  
+  .step-number {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+}
+
+// ============================================
+// CODE BLOCKS - Dark theme (same in both modes)
+// ============================================
+pre {
+  background: var(--pre-bg) !important;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.875rem;
+    color: var(--pre-text);
+    background: transparent !important;
+    line-height: 1.6;
+  }
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  background: var(--code-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875em;
+  color: var(--code-text);
+}
+
+// ============================================
+// TOOLS GRID - Kali-style
+// ============================================
+.tools-section {
+  h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid currentColor;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      padding: 0.375rem 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      
+      &::before {
+        content: '→';
+        margin-right: 0.5rem;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// ============================================
+// DOCUMENTATION PAGES - With dark mode
+// ============================================
+
+// Hide single-item breadcrumb (redundant on landing pages)
+.td-breadcrumbs .breadcrumb {
+  &:has(.breadcrumb-item:only-child) {
+    display: none;
+  }
+}
+
+// Fallback for browsers without :has() support
+.td-breadcrumbs .breadcrumb-item:only-child {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Remove extra space from hidden breadcrumb
+.td-breadcrumbs:has(.breadcrumb-item:only-child) {
+  display: none;
+}
+
+.td-content {
+  max-width: 900px;
+  padding: 2.5rem;
+  padding-top: 0; // Align with sidebar top
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $primary;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #F59E0B;
+    margin-bottom: 2rem;
+    margin-top: 0; // Remove top margin for better alignment
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+  
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  
+  ul, ol {
+    margin-bottom: 1.5rem;
+    
+    li {
+      margin-bottom: 0.625rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+  }
+  
+  a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+      color: #60a5fa;
+    }
+  }
+}
+
+// Dark mode specific for docs
+[data-bs-theme="dark"] .td-content {
+  h1 {
+    color: #60a5fa;
+  }
+}
+
+// ============================================
+// SIDEBAR NAVIGATION - With dark mode
+// ============================================
+.td-sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+// Active sidebar link - blue background
+.td-sidebar-nav a.active {
+  background: #1E3A8A;
+  color: #fff !important;
+  border-radius: 6px;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  
+  // Add space before text using pseudo-element
+  &::before {
+    content: "\00a0\00a0"; // Two non-breaking spaces
+  }
+}
+
+// Root level "Documentation" link - bold, no background
+.td-sidebar-link.tree-root {
+  font-weight: 700 !important;
+}
+
+// ============================================
+// TABLES - With dark mode
+// ============================================
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  
+  th {
+    background: #1E3A8A;
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+    text-align: left;
+  }
+  
+  td {
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    background: var(--card-bg);
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover td {
+    background: var(--table-hover);
+  }
+}
+
+// ============================================
+// ALERTS - With dark mode
+// ============================================
+.alert {
+  border-radius: 12px;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  
+  &-warning {
+    background: #fef3c7;
+    border-left: 4px solid #F59E0B;
+    color: #92400e;
+  }
+  
+  &-info {
+    background: #dbeafe;
+    border-left: 4px solid #3b82f6;
+    color: #1e40af;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .alert-warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+  }
+  
+  .alert-info {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+  }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.td-footer {
+  background: #0f172a;
+  padding: 3rem 0;
+  
+  a {
+    color: #94a3b8;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: #F59E0B;
+    }
+  }
+}
+
+// ============================================
+// CTA SECTION
+// ============================================
+.cta-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1E3A8A 100%);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+// ============================================
+// RESPONSIVE UTILITIES
+// ============================================
+
+// Responsive font scaling for large displays
+@media (min-width: 1920px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .td-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 17px; // Slightly smaller on mobile for better fit
+  }
+  
+  .hero-section {
+    padding: 2rem 1rem !important;
+  }
+  
+  .hero-logo {
+    max-width: 160px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .btn-lg {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
+.text-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// ============================================
+// DARK MODE TOGGLE BUTTON STYLING
+// ============================================
+.td-light-dark-menu {
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    
+    &:hover {
+      background: var(--bg-tertiary);
+    }
+    
+    &.active {
+      background: #1E3A8A;
+      color: #fff;
+    }
+  }
+}
+
+
+// ============================================
+// LOGO DARK/LIGHT MODE SUPPORT
+// ============================================
+// Navbar always has dark background, so use white/light logo
+.td-navbar .navbar-brand img {
+  content: url("/img/logo-navbar.png");
+  height: 40px;
+}
+
+// For any other logo usage that needs dark mode switching
+.logo-auto {
+  content: url("/img/logo-light.png");
+}
+
+[data-bs-theme="dark"] .logo-auto {
+  content: url("/img/logo-dark.png");
+}

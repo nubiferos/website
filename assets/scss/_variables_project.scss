@@ -1,0 +1,19 @@
+// NubiferOS Brand Colors
+// Primary: Deep Blue #1E3A8A
+// Secondary: Silver/Gray #94A3B8  
+// Accent: Gold #F59E0B
+
+$primary: #1E3A8A;
+$secondary: #94A3B8;
+$accent: #F59E0B;
+
+// Extended palette
+$dark-bg: #0f172a;
+$light-bg: #f8fafc;
+$text-dark: #1e293b;
+$text-muted: #64748b;
+
+// Override Bootstrap/Docsy variables
+$link-color: $primary;
+$navbar-dark-color: rgba(255, 255, 255, 0.9);
+$navbar-dark-hover-color: rgba(255, 255, 255, 1);

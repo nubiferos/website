@@ -1,0 +1,6 @@
+# SHA256 checksums for NubiferOS downloads
+# ISO file will be added when alpha release is available
+# 
+# To verify: sha256sum -c SHA256SUMS
+#
+# Placeholder - actual checksums will be added at release

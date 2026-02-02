@@ -2,7 +2,19 @@ baseURL = "https://nubiferos.org/"
 title = "NubiferOS"
 theme = "docsy"
 languageCode = "en-us"
-enableGitInfo = true
+enableGitInfo = false
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content/en"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 # Syntax highlighting
 [markup]
@@ -17,8 +29,9 @@ enableGitInfo = true
 [params]
   description = "The Cloud Engineer's Workstation - Secure multi-account cloud management"
   copyright = "NubiferOS Contributors"
-  github_repo = "https://github.com/nubiferos/nubiferos"
-  github_project_repo = "https://github.com/nubiferos/nubiferos"
+  # Commenting out github repos disables the edit/view source links
+  # github_repo = "https://github.com/nubiferos/nubiferos"
+  # github_project_repo = "https://github.com/nubiferos/nubiferos"
   
   # Brand colors
   # Primary Deep Blue: #1E3A8A
@@ -32,10 +45,11 @@ enableGitInfo = true
     showLightDarkModeMenu = true
     
   [params.ui.feedback]
-    enable = true
-    yes = 'Glad to hear it!'
-    no = 'Sorry to hear that. Please tell us how we can improve.'
-
+    enable = false
+    
+  [params.ui.readingtime]
+    enable = false
+    
   [params.links]
     [[params.links.user]]
       name = "GitHub"
@@ -48,24 +62,27 @@ enableGitInfo = true
       icon = "fab fa-discord"
       desc = "Chat with the community"
 
+  [params.logos]
+    navbar = "img/logo-light.png"
+
 # Main navigation menu
 [menu]
   [[menu.main]]
     name = "Download"
     weight = 10
-    url = "/download/"
+    url = "/en/download/"
   [[menu.main]]
     name = "Documentation"
     weight = 20
-    url = "/docs/"
+    url = "/en/docs/"
   [[menu.main]]
     name = "About"
     weight = 30
-    url = "/about/"
+    url = "/en/about/"
   [[menu.main]]
     name = "Community"
     weight = 40
-    url = "/community/"
+    url = "/en/community/"
 
 [module]
   [module.hugoVersion]

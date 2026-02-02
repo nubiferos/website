@@ -1,11 +1,601 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>NubiferOS</title>
-    <link>https://nubiferos.org/en/</link>
-    <description>Recent content on NubiferOS</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://nubiferos.org/en/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NubiferOS</title><link>https://nubiferos.org/en/</link><description>Recent content on NubiferOS</description><generator>Hugo</generator><language>en</language><atom:link href="https://nubiferos.org/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation Guide</title><link>https://nubiferos.org/en/docs/getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/installation/</guid><description>&lt;p>This guide walks you through installing NubiferOS, including important details about disk encryption, the installer, and known issues.&lt;/p>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;p>Download the latest NubiferOS ISO from our &lt;a href="https://nubiferos.org/en/download/">download page&lt;/a>.&lt;/p>
+&lt;p>After downloading, verify the checksum:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sha256sum nubiferos-alpha-1.0-amd64.iso
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Compare with SHA256SUMS file from download page&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-bootable-usb">Create Bootable USB&lt;/h2>
+&lt;h3 id="using-dd-linuxmacos">Using dd (Linux/macOS)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Find your USB device&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsblk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Write the ISO (replace /dev/sdX with your USB device)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>nubiferos-alpha-1.0-amd64.iso of&lt;span style="color:#f92672">=&lt;/span>/dev/sdX bs&lt;span style="color:#f92672">=&lt;/span>4M status&lt;span style="color:#f92672">=&lt;/span>progress conv&lt;span style="color:#f92672">=&lt;/span>fsync
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Warning&lt;/strong>: Double-check the device name. &lt;code>dd&lt;/code> will overwrite whatever you point it at.&lt;/p></description></item><item><title>Quick Start</title><link>https://nubiferos.org/en/docs/getting-started/quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/quick-start/</guid><description>&lt;p>This guide gets you from first boot to managing cloud resources in under 10 minutes.&lt;/p>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;ul>
+&lt;li>NubiferOS installed (see &lt;a href="https://nubiferos.org/en/docs/getting-started/installation/">Installation&lt;/a>)&lt;/li>
+&lt;li>At least one cloud account (AWS, Azure, or GCP)&lt;/li>
+&lt;li>Your cloud credentials ready&lt;/li>
+&lt;/ul>
+&lt;h2 id="first-boot">First Boot&lt;/h2>
+&lt;p>After installing NubiferOS, you&amp;rsquo;ll be greeted with the GNOME desktop. The workspace indicator in the top panel shows &amp;ldquo;No Workspace&amp;rdquo; until you create one.&lt;/p>
+&lt;h2 id="step-1-create-your-first-workspace">Step 1: Create Your First Workspace&lt;/h2>
+&lt;p>Open a terminal (&lt;code>Ctrl+Alt+T&lt;/code>) and create a workspace:&lt;/p></description></item><item><title>Your First Workspace</title><link>https://nubiferos.org/en/docs/getting-started/first-workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/first-workspace/</guid><description>&lt;h2 id="understanding-workspaces">Understanding Workspaces&lt;/h2>
+&lt;p>A workspace in NubiferOS is an isolated environment for a specific cloud account. When you switch workspaces:&lt;/p>
+&lt;ul>
+&lt;li>Environment variables change to match the workspace&lt;/li>
+&lt;li>Credentials are loaded from encrypted storage&lt;/li>
+&lt;li>Visual indicators update (prompt, panel, optionally wallpaper)&lt;/li>
+&lt;li>Read-only mode can be enabled for additional safety&lt;/li>
+&lt;/ul>
+&lt;h2 id="creating-a-workspace">Creating a Workspace&lt;/h2>
+&lt;h3 id="aws-workspace">AWS Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name aws-prod &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider aws &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --account-id &lt;span style="color:#ae81ff">123456789012&lt;/span> &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --region us-east-1 &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color red &lt;span style="color:#75715e"># Visual indicator color&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="azure-workspace">Azure Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name azure-dev &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider azure &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --subscription-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color blue
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gcp-workspace">GCP Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name gcp-staging &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider gcp &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --project-id my-project-staging &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color green
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-credentials">Adding Credentials&lt;/h2>
+&lt;p>After creating a workspace, add your credentials:&lt;/p></description></item><item><title>Threat Model</title><link>https://nubiferos.org/en/docs/security/threat-model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/threat-model/</guid><description>&lt;p>NubiferOS publishes its threat model so you can make informed decisions about your security requirements. Most operating systems make vague security claims—we tell you exactly what we protect against and what we don&amp;rsquo;t.&lt;/p>
+&lt;h2 id="why-a-public-threat-model">Why a Public Threat Model?&lt;/h2>
+&lt;p>Security through obscurity doesn&amp;rsquo;t work. By publishing our threat model, we:&lt;/p>
+&lt;ul>
+&lt;li>Help you assess if NubiferOS meets your security requirements&lt;/li>
+&lt;li>Enable security researchers to identify gaps&lt;/li>
+&lt;li>Build trust through transparency&lt;/li>
+&lt;li>Set clear expectations for users&lt;/li>
+&lt;/ul>
+&lt;h2 id="user-persona">User Persona&lt;/h2>
+&lt;p>&lt;strong>Primary User&lt;/strong>: Cloud Engineer / DevOps Professional&lt;/p></description></item><item><title>Available Tools</title><link>https://nubiferos.org/en/docs/reference/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/reference/tools/</guid><description>&lt;p>NubiferOS offers 50+ cloud tools that you can select during installation. This page lists all available tools organized by category.&lt;/p>
+&lt;h2 id="installation-options">Installation Options&lt;/h2>
+&lt;p>During installation, you choose which tools to install:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Installation Type&lt;/th>
+ &lt;th>Size&lt;/th>
+ &lt;th>What&amp;rsquo;s Included&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Minimal&lt;/strong>&lt;/td>
+ &lt;td>~2GB&lt;/td>
+ &lt;td>Core CLIs, VS Code, essential utilities&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Standard&lt;/strong>&lt;/td>
+ &lt;td>~4-5GB&lt;/td>
+ &lt;td>Popular cloud tools, 2-3 IDEs&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Full&lt;/strong>&lt;/td>
+ &lt;td>~7-8GB&lt;/td>
+ &lt;td>Everything available&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Custom&lt;/strong>&lt;/td>
+ &lt;td>Varies&lt;/td>
+ &lt;td>Pick exactly what you need&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="quick-navigation">Quick Navigation&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#cloud-cli-tools">Cloud CLI Tools&lt;/a> - AWS, Azure, GCP&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#infrastructure-as-code">Infrastructure as Code&lt;/a> - Terraform, Pulumi, Ansible&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#container--kubernetes-tools">Container &amp;amp; Kubernetes&lt;/a> - Docker, kubectl, Helm&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#monitoring--observability">Monitoring &amp;amp; Observability&lt;/a> - Grafana, Prometheus, Trivy&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#cicd--gitops-tools">CI/CD &amp;amp; GitOps&lt;/a> - GitHub CLI, ArgoCD, Flux&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#database-clients">Database Clients&lt;/a> - PostgreSQL, MySQL, MongoDB&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#testing-frameworks">Testing Frameworks&lt;/a> - k6, Playwright, Selenium&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#secrets-management">Secrets Management&lt;/a> - Vault, SOPS, age&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#development-tools">Development Tools&lt;/a> - Languages, utilities&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#ides">IDEs&lt;/a> - VS Code, IntelliJ, PyCharm&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="cloud-cli-tools">Cloud CLI Tools&lt;/h2>
+&lt;h3 id="aws-tools-11-tools">AWS Tools (11 tools)&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS CLI v2&lt;/strong>&lt;/td>
+ &lt;td>Primary AWS command-line interface&lt;/td>
+ &lt;td>All AWS operations&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>SAM CLI&lt;/strong>&lt;/td>
+ &lt;td>Serverless Application Model&lt;/td>
+ &lt;td>Lambda development&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>eksctl&lt;/strong>&lt;/td>
+ &lt;td>Amazon EKS cluster management&lt;/td>
+ &lt;td>Kubernetes on AWS&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS CDK&lt;/strong>&lt;/td>
+ &lt;td>Cloud Development Kit&lt;/td>
+ &lt;td>Infrastructure as code&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Session Manager Plugin&lt;/strong>&lt;/td>
+ &lt;td>Secure shell access&lt;/td>
+ &lt;td>EC2 access without SSH keys&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Copilot&lt;/strong>&lt;/td>
+ &lt;td>Container deployment&lt;/td>
+ &lt;td>ECS/Fargate deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Amplify CLI&lt;/strong>&lt;/td>
+ &lt;td>Full-stack app development&lt;/td>
+ &lt;td>Web/mobile apps&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>EB CLI&lt;/strong>&lt;/td>
+ &lt;td>Elastic Beanstalk deployment&lt;/td>
+ &lt;td>PaaS deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS NoSQL Workbench&lt;/strong>&lt;/td>
+ &lt;td>DynamoDB GUI tool&lt;/td>
+ &lt;td>Database design&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Vault&lt;/strong>&lt;/td>
+ &lt;td>Secure credential storage&lt;/td>
+ &lt;td>Credential management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Lightsail CLI&lt;/strong>&lt;/td>
+ &lt;td>Lightsail management&lt;/td>
+ &lt;td>Simple cloud hosting&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="azure-tools-3-tools">Azure Tools (3 tools)&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Azure CLI&lt;/strong>&lt;/td>
+ &lt;td>Primary Azure command-line interface&lt;/td>
+ &lt;td>All Azure operations&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Azure Functions Core Tools&lt;/strong>&lt;/td>
+ &lt;td>Serverless function development&lt;/td>
+ &lt;td>Azure Functions&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Bicep&lt;/strong>&lt;/td>
+ &lt;td>Azure infrastructure as code&lt;/td>
+ &lt;td>ARM template alternative&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="google-cloud-tools">Google Cloud Tools&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>gcloud SDK&lt;/strong>&lt;/td>
+ &lt;td>Google Cloud CLI (includes gcloud, gsutil, bq)&lt;/td>
+ &lt;td>All GCP operations&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="infrastructure-as-code">Infrastructure as Code&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Terraform&lt;/strong>&lt;/td>
+ &lt;td>Multi-cloud infrastructure provisioning&lt;/td>
+ &lt;td>Infrastructure automation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Pulumi&lt;/strong>&lt;/td>
+ &lt;td>Modern infrastructure as code&lt;/td>
+ &lt;td>TypeScript/Python IaC&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Ansible&lt;/strong>&lt;/td>
+ &lt;td>Configuration management&lt;/td>
+ &lt;td>Server configuration&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="container--kubernetes-tools">Container &amp;amp; Kubernetes Tools&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Docker&lt;/strong>&lt;/td>
+ &lt;td>Container runtime and CLI&lt;/td>
+ &lt;td>Container development&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Podman&lt;/strong>&lt;/td>
+ &lt;td>Daemonless container engine&lt;/td>
+ &lt;td>Rootless containers&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>kubectl&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes command-line tool&lt;/td>
+ &lt;td>Cluster management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Helm&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes package manager&lt;/td>
+ &lt;td>Application deployment&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>k9s&lt;/strong>&lt;/td>
+ &lt;td>Terminal UI for Kubernetes&lt;/td>
+ &lt;td>Cluster monitoring&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Dive&lt;/strong>&lt;/td>
+ &lt;td>Docker image layer explorer&lt;/td>
+ &lt;td>Image optimization&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Lazydocker&lt;/strong>&lt;/td>
+ &lt;td>Docker terminal UI&lt;/td>
+ &lt;td>Container management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Stern&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes log tailing&lt;/td>
+ &lt;td>Log aggregation&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="monitoring--observability">Monitoring &amp;amp; Observability&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Grafana&lt;/strong>&lt;/td>
+ &lt;td>Visualization and dashboards&lt;/td>
+ &lt;td>Metrics visualization&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Prometheus (promtool)&lt;/strong>&lt;/td>
+ &lt;td>Metrics collection&lt;/td>
+ &lt;td>Alerting rules&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Loki (logcli)&lt;/strong>&lt;/td>
+ &lt;td>Log aggregation&lt;/td>
+ &lt;td>Log querying&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Trivy&lt;/strong>&lt;/td>
+ &lt;td>Security scanner&lt;/td>
+ &lt;td>Container/IaC scanning&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="cicd--gitops-tools">CI/CD &amp;amp; GitOps Tools&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>GitHub CLI (gh)&lt;/strong>&lt;/td>
+ &lt;td>GitHub command-line interface&lt;/td>
+ &lt;td>GitHub workflows&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>GitLab CLI (glab)&lt;/strong>&lt;/td>
+ &lt;td>GitLab command-line interface&lt;/td>
+ &lt;td>GitLab workflows&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>ArgoCD&lt;/strong>&lt;/td>
+ &lt;td>GitOps continuous delivery&lt;/td>
+ &lt;td>Kubernetes deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Flux&lt;/strong>&lt;/td>
+ &lt;td>GitOps toolkit&lt;/td>
+ &lt;td>Kubernetes GitOps&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Tekton CLI (tkn)&lt;/strong>&lt;/td>
+ &lt;td>Cloud-native CI/CD&lt;/td>
+ &lt;td>Pipeline management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Jenkins CLI&lt;/strong>&lt;/td>
+ &lt;td>Jenkins server connection&lt;/td>
+ &lt;td>CI/CD automation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Kustomize&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes configuration&lt;/td>
+ &lt;td>YAML management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Skaffold&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes development&lt;/td>
+ &lt;td>Dev workflow&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="database-clients">Database Clients&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>psql&lt;/strong>&lt;/td>
+ &lt;td>PostgreSQL client&lt;/td>
+ &lt;td>PostgreSQL databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>mysql&lt;/strong>&lt;/td>
+ &lt;td>MySQL/MariaDB client&lt;/td>
+ &lt;td>MySQL databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>mongosh&lt;/strong>&lt;/td>
+ &lt;td>MongoDB shell&lt;/td>
+ &lt;td>MongoDB databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>redis-cli&lt;/strong>&lt;/td>
+ &lt;td>Redis client&lt;/td>
+ &lt;td>Redis caching&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="testing-frameworks">Testing Frameworks&lt;/h2>
+&lt;h3 id="load--performance-testing">Load &amp;amp; Performance Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>k6&lt;/strong>&lt;/td>
+ &lt;td>Modern load testing&lt;/td>
+ &lt;td>Performance testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Locust&lt;/strong>&lt;/td>
+ &lt;td>Python-based load testing&lt;/td>
+ &lt;td>Distributed load tests&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Newman&lt;/strong>&lt;/td>
+ &lt;td>Postman CLI&lt;/td>
+ &lt;td>API testing&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="browser--e2e-testing">Browser &amp;amp; E2E Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Selenium&lt;/strong>&lt;/td>
+ &lt;td>Browser automation&lt;/td>
+ &lt;td>Web testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Playwright&lt;/strong>&lt;/td>
+ &lt;td>Modern browser testing&lt;/td>
+ &lt;td>Cross-browser testing&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="unit--integration-testing">Unit &amp;amp; Integration Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Pytest&lt;/strong>&lt;/td>
+ &lt;td>Python testing framework&lt;/td>
+ &lt;td>Python tests&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Robot Framework&lt;/strong>&lt;/td>
+ &lt;td>Keyword-driven testing&lt;/td>
+ &lt;td>Acceptance testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Behave&lt;/strong>&lt;/td>
+ &lt;td>BDD testing for Python&lt;/td>
+ &lt;td>Behavior-driven tests&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="security-testing">Security Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>SonarQube Scanner&lt;/strong>&lt;/td>
+ &lt;td>Code quality and security&lt;/td>
+ &lt;td>Code analysis&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>OWASP ZAP&lt;/strong>&lt;/td>
+ &lt;td>Security testing&lt;/td>
+ &lt;td>Vulnerability scanning&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Trivy&lt;/strong>&lt;/td>
+ &lt;td>Container/IaC security&lt;/td>
+ &lt;td>Security scanning&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="secrets-management">Secrets Management&lt;/h2>
+&lt;p>These tools are available for managing secrets in your cloud infrastructure. For how NubiferOS manages your local credentials, see &lt;a href="https://nubiferos.org/en/docs/security/credential-security/">Credential Security&lt;/a>.&lt;/p></description></item><item><title>Workspaces</title><link>https://nubiferos.org/en/docs/user-guide/workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/user-guide/workspaces/</guid><description>&lt;p>Workspaces are the core concept in NubiferOS. Each workspace is an isolated environment for a specific cloud account, preventing credential leakage and accidental cross-account operations.&lt;/p>
+&lt;h2 id="why-workspaces">Why Workspaces?&lt;/h2>
+&lt;p>Cloud engineers face a common problem: managing multiple cloud accounts without accidentally running commands in the wrong one.&lt;/p>
+&lt;p>&lt;strong>The risk is real:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Running &lt;code>terraform destroy&lt;/code> in production instead of staging&lt;/li>
+&lt;li>Deploying to the wrong AWS account&lt;/li>
+&lt;li>Leaking credentials between accounts&lt;/li>
+&lt;li>No visual indication of which account is active&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Workspaces solve this by:&lt;/strong>&lt;/p></description></item><item><title>Disk Encryption</title><link>https://nubiferos.org/en/docs/security/disk-encryption/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/disk-encryption/</guid><description>&lt;p>NubiferOS uses LUKS (Linux Unified Key Setup) for full disk encryption. This page explains the current implementation, why encryption matters, and planned improvements.&lt;/p>
+&lt;h2 id="current-implementation-v10">Current Implementation (v1.0)&lt;/h2>
+&lt;h3 id="luks1-everywhere">LUKS1 Everywhere&lt;/h3>
+&lt;p>NubiferOS Alpha uses LUKS1 for simplicity:&lt;/p>
+&lt;ul>
+&lt;li>Single passphrase at boot&lt;/li>
+&lt;li>AES-256-XTS encryption&lt;/li>
+&lt;li>Mandatory for all installations&lt;/li>
+&lt;li>Works on all hardware&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Boot process:&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>Power on → GRUB loads&lt;/li>
+&lt;li>Enter LUKS passphrase&lt;/li>
+&lt;li>Disk decrypts → System boots&lt;/li>
+&lt;li>Login with user password&lt;/li>
+&lt;/ol>
+&lt;h3 id="why-encryption-is-mandatory">Why Encryption is Mandatory&lt;/h3>
+&lt;p>For a cloud engineer workstation, disk encryption isn&amp;rsquo;t optional:&lt;/p></description></item><item><title>Credential Security</title><link>https://nubiferos.org/en/docs/security/credential-security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/credential-security/</guid><description>&lt;p>NubiferOS provides multi-layer credential protection using battle-tested tools rather than custom encryption. Your credentials are protected at rest and automatically injected into cloud CLIs when needed.&lt;/p>
+&lt;h2 id="why-secure-credential-management">Why Secure Credential Management?&lt;/h2>
+&lt;p>Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:&lt;/p>
+&lt;ul>
+&lt;li>Unauthorized resource creation (cryptomining)&lt;/li>
+&lt;li>Data exfiltration&lt;/li>
+&lt;li>Infrastructure destruction&lt;/li>
+&lt;li>Massive cloud bills&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Common credential mistakes:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Storing credentials in plaintext &lt;code>~/.aws/credentials&lt;/code>&lt;/li>
+&lt;li>Exposing credentials in environment variables (visible in &lt;code>/proc&lt;/code>)&lt;/li>
+&lt;li>Committing credentials to git repositories&lt;/li>
+&lt;li>Sharing credentials via Slack or email&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>NubiferOS solves this by:&lt;/strong>&lt;/p></description></item><item><title>Credentials</title><link>https://nubiferos.org/en/docs/user-guide/credentials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/user-guide/credentials/</guid><description>&lt;p>NubiferOS provides encrypted credential management using battle-tested tools (GPG + pass) rather than custom encryption. Your credentials are protected at rest and automatically injected into cloud CLIs when needed.&lt;/p>
+&lt;h2 id="why-secure-credential-management">Why Secure Credential Management?&lt;/h2>
+&lt;p>Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:&lt;/p>
+&lt;ul>
+&lt;li>Unauthorized resource creation (cryptomining)&lt;/li>
+&lt;li>Data exfiltration&lt;/li>
+&lt;li>Infrastructure destruction&lt;/li>
+&lt;li>Massive cloud bills&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Common credential mistakes:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Storing credentials in plaintext &lt;code>~/.aws/credentials&lt;/code>&lt;/li>
+&lt;li>Exposing credentials in environment variables (visible in &lt;code>/proc&lt;/code>)&lt;/li>
+&lt;li>Committing credentials to git repositories&lt;/li>
+&lt;li>Sharing credentials via Slack or email&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>NubiferOS solves this by:&lt;/strong>&lt;/p></description></item><item><title>Workspace Isolation</title><link>https://nubiferos.org/en/docs/security/workspace-isolation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/security/workspace-isolation/</guid><description>&lt;p>Workspace isolation is NubiferOS&amp;rsquo;s core defense against cross-account mistakes and credential leakage. Each workspace runs in an isolated sandbox using Linux namespaces, ensuring credentials from one cloud account are invisible to another.&lt;/p>
+&lt;h2 id="why-workspace-isolation">Why Workspace Isolation?&lt;/h2>
+&lt;p>Cloud engineers face a critical security challenge: managing multiple cloud accounts without accidentally leaking credentials between them.&lt;/p>
+&lt;p>&lt;strong>The risks are real:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Malware in one workspace stealing credentials from another&lt;/li>
+&lt;li>Browser extensions reading AWS credentials from disk&lt;/li>
+&lt;li>Accidental credential exposure via environment variables&lt;/li>
+&lt;li>Cross-account operations due to credential confusion&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Workspace isolation solves this by:&lt;/strong>&lt;/p></description></item></channel></rss>

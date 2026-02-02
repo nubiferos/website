@@ -1,11 +1,468 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reference on NubiferOS</title>
-    <link>https://nubiferos.org/en/docs/reference/</link>
-    <description>Recent content in Reference on NubiferOS</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://nubiferos.org/en/docs/reference/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reference on NubiferOS</title><link>https://nubiferos.org/en/docs/reference/</link><description>Recent content in Reference on NubiferOS</description><generator>Hugo</generator><language>en</language><atom:link href="https://nubiferos.org/en/docs/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Available Tools</title><link>https://nubiferos.org/en/docs/reference/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/reference/tools/</guid><description>&lt;p>NubiferOS offers 50+ cloud tools that you can select during installation. This page lists all available tools organized by category.&lt;/p>
+&lt;h2 id="installation-options">Installation Options&lt;/h2>
+&lt;p>During installation, you choose which tools to install:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Installation Type&lt;/th>
+ &lt;th>Size&lt;/th>
+ &lt;th>What&amp;rsquo;s Included&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Minimal&lt;/strong>&lt;/td>
+ &lt;td>~2GB&lt;/td>
+ &lt;td>Core CLIs, VS Code, essential utilities&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Standard&lt;/strong>&lt;/td>
+ &lt;td>~4-5GB&lt;/td>
+ &lt;td>Popular cloud tools, 2-3 IDEs&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Full&lt;/strong>&lt;/td>
+ &lt;td>~7-8GB&lt;/td>
+ &lt;td>Everything available&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Custom&lt;/strong>&lt;/td>
+ &lt;td>Varies&lt;/td>
+ &lt;td>Pick exactly what you need&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="quick-navigation">Quick Navigation&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#cloud-cli-tools">Cloud CLI Tools&lt;/a> - AWS, Azure, GCP&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#infrastructure-as-code">Infrastructure as Code&lt;/a> - Terraform, Pulumi, Ansible&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#container--kubernetes-tools">Container &amp;amp; Kubernetes&lt;/a> - Docker, kubectl, Helm&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#monitoring--observability">Monitoring &amp;amp; Observability&lt;/a> - Grafana, Prometheus, Trivy&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#cicd--gitops-tools">CI/CD &amp;amp; GitOps&lt;/a> - GitHub CLI, ArgoCD, Flux&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#database-clients">Database Clients&lt;/a> - PostgreSQL, MySQL, MongoDB&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#testing-frameworks">Testing Frameworks&lt;/a> - k6, Playwright, Selenium&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#secrets-management">Secrets Management&lt;/a> - Vault, SOPS, age&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#development-tools">Development Tools&lt;/a> - Languages, utilities&lt;/li>
+&lt;li>&lt;a href="https://nubiferos.org/en/docs/reference/tools/#ides">IDEs&lt;/a> - VS Code, IntelliJ, PyCharm&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="cloud-cli-tools">Cloud CLI Tools&lt;/h2>
+&lt;h3 id="aws-tools-11-tools">AWS Tools (11 tools)&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS CLI v2&lt;/strong>&lt;/td>
+ &lt;td>Primary AWS command-line interface&lt;/td>
+ &lt;td>All AWS operations&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>SAM CLI&lt;/strong>&lt;/td>
+ &lt;td>Serverless Application Model&lt;/td>
+ &lt;td>Lambda development&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>eksctl&lt;/strong>&lt;/td>
+ &lt;td>Amazon EKS cluster management&lt;/td>
+ &lt;td>Kubernetes on AWS&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS CDK&lt;/strong>&lt;/td>
+ &lt;td>Cloud Development Kit&lt;/td>
+ &lt;td>Infrastructure as code&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Session Manager Plugin&lt;/strong>&lt;/td>
+ &lt;td>Secure shell access&lt;/td>
+ &lt;td>EC2 access without SSH keys&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Copilot&lt;/strong>&lt;/td>
+ &lt;td>Container deployment&lt;/td>
+ &lt;td>ECS/Fargate deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Amplify CLI&lt;/strong>&lt;/td>
+ &lt;td>Full-stack app development&lt;/td>
+ &lt;td>Web/mobile apps&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>EB CLI&lt;/strong>&lt;/td>
+ &lt;td>Elastic Beanstalk deployment&lt;/td>
+ &lt;td>PaaS deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS NoSQL Workbench&lt;/strong>&lt;/td>
+ &lt;td>DynamoDB GUI tool&lt;/td>
+ &lt;td>Database design&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>AWS Vault&lt;/strong>&lt;/td>
+ &lt;td>Secure credential storage&lt;/td>
+ &lt;td>Credential management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Lightsail CLI&lt;/strong>&lt;/td>
+ &lt;td>Lightsail management&lt;/td>
+ &lt;td>Simple cloud hosting&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="azure-tools-3-tools">Azure Tools (3 tools)&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Azure CLI&lt;/strong>&lt;/td>
+ &lt;td>Primary Azure command-line interface&lt;/td>
+ &lt;td>All Azure operations&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Azure Functions Core Tools&lt;/strong>&lt;/td>
+ &lt;td>Serverless function development&lt;/td>
+ &lt;td>Azure Functions&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Bicep&lt;/strong>&lt;/td>
+ &lt;td>Azure infrastructure as code&lt;/td>
+ &lt;td>ARM template alternative&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="google-cloud-tools">Google Cloud Tools&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>gcloud SDK&lt;/strong>&lt;/td>
+ &lt;td>Google Cloud CLI (includes gcloud, gsutil, bq)&lt;/td>
+ &lt;td>All GCP operations&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="infrastructure-as-code">Infrastructure as Code&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Terraform&lt;/strong>&lt;/td>
+ &lt;td>Multi-cloud infrastructure provisioning&lt;/td>
+ &lt;td>Infrastructure automation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Pulumi&lt;/strong>&lt;/td>
+ &lt;td>Modern infrastructure as code&lt;/td>
+ &lt;td>TypeScript/Python IaC&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Ansible&lt;/strong>&lt;/td>
+ &lt;td>Configuration management&lt;/td>
+ &lt;td>Server configuration&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="container--kubernetes-tools">Container &amp;amp; Kubernetes Tools&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Docker&lt;/strong>&lt;/td>
+ &lt;td>Container runtime and CLI&lt;/td>
+ &lt;td>Container development&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Podman&lt;/strong>&lt;/td>
+ &lt;td>Daemonless container engine&lt;/td>
+ &lt;td>Rootless containers&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>kubectl&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes command-line tool&lt;/td>
+ &lt;td>Cluster management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Helm&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes package manager&lt;/td>
+ &lt;td>Application deployment&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>k9s&lt;/strong>&lt;/td>
+ &lt;td>Terminal UI for Kubernetes&lt;/td>
+ &lt;td>Cluster monitoring&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Dive&lt;/strong>&lt;/td>
+ &lt;td>Docker image layer explorer&lt;/td>
+ &lt;td>Image optimization&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Lazydocker&lt;/strong>&lt;/td>
+ &lt;td>Docker terminal UI&lt;/td>
+ &lt;td>Container management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Stern&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes log tailing&lt;/td>
+ &lt;td>Log aggregation&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="monitoring--observability">Monitoring &amp;amp; Observability&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Grafana&lt;/strong>&lt;/td>
+ &lt;td>Visualization and dashboards&lt;/td>
+ &lt;td>Metrics visualization&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Prometheus (promtool)&lt;/strong>&lt;/td>
+ &lt;td>Metrics collection&lt;/td>
+ &lt;td>Alerting rules&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Loki (logcli)&lt;/strong>&lt;/td>
+ &lt;td>Log aggregation&lt;/td>
+ &lt;td>Log querying&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Trivy&lt;/strong>&lt;/td>
+ &lt;td>Security scanner&lt;/td>
+ &lt;td>Container/IaC scanning&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="cicd--gitops-tools">CI/CD &amp;amp; GitOps Tools&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>GitHub CLI (gh)&lt;/strong>&lt;/td>
+ &lt;td>GitHub command-line interface&lt;/td>
+ &lt;td>GitHub workflows&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>GitLab CLI (glab)&lt;/strong>&lt;/td>
+ &lt;td>GitLab command-line interface&lt;/td>
+ &lt;td>GitLab workflows&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>ArgoCD&lt;/strong>&lt;/td>
+ &lt;td>GitOps continuous delivery&lt;/td>
+ &lt;td>Kubernetes deployments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Flux&lt;/strong>&lt;/td>
+ &lt;td>GitOps toolkit&lt;/td>
+ &lt;td>Kubernetes GitOps&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Tekton CLI (tkn)&lt;/strong>&lt;/td>
+ &lt;td>Cloud-native CI/CD&lt;/td>
+ &lt;td>Pipeline management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Jenkins CLI&lt;/strong>&lt;/td>
+ &lt;td>Jenkins server connection&lt;/td>
+ &lt;td>CI/CD automation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Kustomize&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes configuration&lt;/td>
+ &lt;td>YAML management&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Skaffold&lt;/strong>&lt;/td>
+ &lt;td>Kubernetes development&lt;/td>
+ &lt;td>Dev workflow&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="database-clients">Database Clients&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>psql&lt;/strong>&lt;/td>
+ &lt;td>PostgreSQL client&lt;/td>
+ &lt;td>PostgreSQL databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>mysql&lt;/strong>&lt;/td>
+ &lt;td>MySQL/MariaDB client&lt;/td>
+ &lt;td>MySQL databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>mongosh&lt;/strong>&lt;/td>
+ &lt;td>MongoDB shell&lt;/td>
+ &lt;td>MongoDB databases&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>redis-cli&lt;/strong>&lt;/td>
+ &lt;td>Redis client&lt;/td>
+ &lt;td>Redis caching&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="testing-frameworks">Testing Frameworks&lt;/h2>
+&lt;h3 id="load--performance-testing">Load &amp;amp; Performance Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>k6&lt;/strong>&lt;/td>
+ &lt;td>Modern load testing&lt;/td>
+ &lt;td>Performance testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Locust&lt;/strong>&lt;/td>
+ &lt;td>Python-based load testing&lt;/td>
+ &lt;td>Distributed load tests&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Newman&lt;/strong>&lt;/td>
+ &lt;td>Postman CLI&lt;/td>
+ &lt;td>API testing&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="browser--e2e-testing">Browser &amp;amp; E2E Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Selenium&lt;/strong>&lt;/td>
+ &lt;td>Browser automation&lt;/td>
+ &lt;td>Web testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Playwright&lt;/strong>&lt;/td>
+ &lt;td>Modern browser testing&lt;/td>
+ &lt;td>Cross-browser testing&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="unit--integration-testing">Unit &amp;amp; Integration Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Pytest&lt;/strong>&lt;/td>
+ &lt;td>Python testing framework&lt;/td>
+ &lt;td>Python tests&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Robot Framework&lt;/strong>&lt;/td>
+ &lt;td>Keyword-driven testing&lt;/td>
+ &lt;td>Acceptance testing&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Behave&lt;/strong>&lt;/td>
+ &lt;td>BDD testing for Python&lt;/td>
+ &lt;td>Behavior-driven tests&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="security-testing">Security Testing&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Use Case&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>SonarQube Scanner&lt;/strong>&lt;/td>
+ &lt;td>Code quality and security&lt;/td>
+ &lt;td>Code analysis&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>OWASP ZAP&lt;/strong>&lt;/td>
+ &lt;td>Security testing&lt;/td>
+ &lt;td>Vulnerability scanning&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Trivy&lt;/strong>&lt;/td>
+ &lt;td>Container/IaC security&lt;/td>
+ &lt;td>Security scanning&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="secrets-management">Secrets Management&lt;/h2>
+&lt;p>These tools are available for managing secrets in your cloud infrastructure. For how NubiferOS manages your local credentials, see &lt;a href="https://nubiferos.org/en/docs/security/credential-security/">Credential Security&lt;/a>.&lt;/p></description></item></channel></rss>

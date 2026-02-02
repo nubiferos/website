@@ -1,11 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>User Guide on NubiferOS</title>
-    <link>https://nubiferos.org/en/docs/user-guide/</link>
-    <description>Recent content in User Guide on NubiferOS</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://nubiferos.org/en/docs/user-guide/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User Guide on NubiferOS</title><link>https://nubiferos.org/en/docs/user-guide/</link><description>Recent content in User Guide on NubiferOS</description><generator>Hugo</generator><language>en</language><atom:link href="https://nubiferos.org/en/docs/user-guide/index.xml" rel="self" type="application/rss+xml"/><item><title>Workspaces</title><link>https://nubiferos.org/en/docs/user-guide/workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/user-guide/workspaces/</guid><description>&lt;p>Workspaces are the core concept in NubiferOS. Each workspace is an isolated environment for a specific cloud account, preventing credential leakage and accidental cross-account operations.&lt;/p>
+&lt;h2 id="why-workspaces">Why Workspaces?&lt;/h2>
+&lt;p>Cloud engineers face a common problem: managing multiple cloud accounts without accidentally running commands in the wrong one.&lt;/p>
+&lt;p>&lt;strong>The risk is real:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Running &lt;code>terraform destroy&lt;/code> in production instead of staging&lt;/li>
+&lt;li>Deploying to the wrong AWS account&lt;/li>
+&lt;li>Leaking credentials between accounts&lt;/li>
+&lt;li>No visual indication of which account is active&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Workspaces solve this by:&lt;/strong>&lt;/p></description></item><item><title>Credentials</title><link>https://nubiferos.org/en/docs/user-guide/credentials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/user-guide/credentials/</guid><description>&lt;p>NubiferOS provides encrypted credential management using battle-tested tools (GPG + pass) rather than custom encryption. Your credentials are protected at rest and automatically injected into cloud CLIs when needed.&lt;/p>
+&lt;h2 id="why-secure-credential-management">Why Secure Credential Management?&lt;/h2>
+&lt;p>Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:&lt;/p>
+&lt;ul>
+&lt;li>Unauthorized resource creation (cryptomining)&lt;/li>
+&lt;li>Data exfiltration&lt;/li>
+&lt;li>Infrastructure destruction&lt;/li>
+&lt;li>Massive cloud bills&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Common credential mistakes:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Storing credentials in plaintext &lt;code>~/.aws/credentials&lt;/code>&lt;/li>
+&lt;li>Exposing credentials in environment variables (visible in &lt;code>/proc&lt;/code>)&lt;/li>
+&lt;li>Committing credentials to git repositories&lt;/li>
+&lt;li>Sharing credentials via Slack or email&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>NubiferOS solves this by:&lt;/strong>&lt;/p></description></item></channel></rss>

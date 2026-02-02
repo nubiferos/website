@@ -1,11 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Getting Started on NubiferOS</title>
-    <link>https://nubiferos.org/en/docs/getting-started/</link>
-    <description>Recent content in Getting Started on NubiferOS</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://nubiferos.org/en/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on NubiferOS</title><link>https://nubiferos.org/en/docs/getting-started/</link><description>Recent content in Getting Started on NubiferOS</description><generator>Hugo</generator><language>en</language><atom:link href="https://nubiferos.org/en/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation Guide</title><link>https://nubiferos.org/en/docs/getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/installation/</guid><description>&lt;p>This guide walks you through installing NubiferOS, including important details about disk encryption, the installer, and known issues.&lt;/p>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;p>Download the latest NubiferOS ISO from our &lt;a href="https://nubiferos.org/en/download/">download page&lt;/a>.&lt;/p>
+&lt;p>After downloading, verify the checksum:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sha256sum nubiferos-alpha-1.0-amd64.iso
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Compare with SHA256SUMS file from download page&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-bootable-usb">Create Bootable USB&lt;/h2>
+&lt;h3 id="using-dd-linuxmacos">Using dd (Linux/macOS)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Find your USB device&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsblk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Write the ISO (replace /dev/sdX with your USB device)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>nubiferos-alpha-1.0-amd64.iso of&lt;span style="color:#f92672">=&lt;/span>/dev/sdX bs&lt;span style="color:#f92672">=&lt;/span>4M status&lt;span style="color:#f92672">=&lt;/span>progress conv&lt;span style="color:#f92672">=&lt;/span>fsync
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Warning&lt;/strong>: Double-check the device name. &lt;code>dd&lt;/code> will overwrite whatever you point it at.&lt;/p></description></item><item><title>Quick Start</title><link>https://nubiferos.org/en/docs/getting-started/quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/quick-start/</guid><description>&lt;p>This guide gets you from first boot to managing cloud resources in under 10 minutes.&lt;/p>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;ul>
+&lt;li>NubiferOS installed (see &lt;a href="https://nubiferos.org/en/docs/getting-started/installation/">Installation&lt;/a>)&lt;/li>
+&lt;li>At least one cloud account (AWS, Azure, or GCP)&lt;/li>
+&lt;li>Your cloud credentials ready&lt;/li>
+&lt;/ul>
+&lt;h2 id="first-boot">First Boot&lt;/h2>
+&lt;p>After installing NubiferOS, you&amp;rsquo;ll be greeted with the GNOME desktop. The workspace indicator in the top panel shows &amp;ldquo;No Workspace&amp;rdquo; until you create one.&lt;/p>
+&lt;h2 id="step-1-create-your-first-workspace">Step 1: Create Your First Workspace&lt;/h2>
+&lt;p>Open a terminal (&lt;code>Ctrl+Alt+T&lt;/code>) and create a workspace:&lt;/p></description></item><item><title>Your First Workspace</title><link>https://nubiferos.org/en/docs/getting-started/first-workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nubiferos.org/en/docs/getting-started/first-workspace/</guid><description>&lt;h2 id="understanding-workspaces">Understanding Workspaces&lt;/h2>
+&lt;p>A workspace in NubiferOS is an isolated environment for a specific cloud account. When you switch workspaces:&lt;/p>
+&lt;ul>
+&lt;li>Environment variables change to match the workspace&lt;/li>
+&lt;li>Credentials are loaded from encrypted storage&lt;/li>
+&lt;li>Visual indicators update (prompt, panel, optionally wallpaper)&lt;/li>
+&lt;li>Read-only mode can be enabled for additional safety&lt;/li>
+&lt;/ul>
+&lt;h2 id="creating-a-workspace">Creating a Workspace&lt;/h2>
+&lt;h3 id="aws-workspace">AWS Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name aws-prod &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider aws &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --account-id &lt;span style="color:#ae81ff">123456789012&lt;/span> &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --region us-east-1 &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color red &lt;span style="color:#75715e"># Visual indicator color&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="azure-workspace">Azure Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name azure-dev &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider azure &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --subscription-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color blue
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gcp-workspace">GCP Workspace&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nubifer-workspace create &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --name gcp-staging &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --provider gcp &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --project-id my-project-staging &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span> --color green
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-credentials">Adding Credentials&lt;/h2>
+&lt;p>After creating a workspace, add your credentials:&lt;/p></description></item></channel></rss>
