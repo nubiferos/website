@@ -28,6 +28,8 @@ defaultContentLanguageInSubdir = true
 [params]
   description = "The Cloud Engineer's Workstation - Secure multi-account cloud management"
   copyright = "NubiferOS Contributors"
+  # Disable math rendering (KaTeX) - we don't use it
+  math = false
   # Commenting out github repos disables the edit/view source links
   # github_repo = "https://github.com/nubiferos/nubiferos"
   # github_project_repo = "https://github.com/nubiferos/nubiferos"
