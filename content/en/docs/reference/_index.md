@@ -139,7 +139,7 @@ GOOGLE_APPLICATION_CREDENTIALS, GOOGLE_CLOUD_PROJECT
 
 ## Included Tools
 
-See the [Features page](/en/features/) for a complete list of pre-installed tools.
+See the [Features page](/features/) for a complete list of pre-installed tools.
 
 **Source**: [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/main/docs/guides/INCLUDED_TOOLS.md)
 

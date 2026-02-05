@@ -166,7 +166,7 @@ During installation, you choose which tools to install:
 
 ## Secrets Management
 
-These tools are available for managing secrets in your cloud infrastructure. For how NubiferOS manages your local credentials, see [Credential Security](/en/docs/security/credential-security/).
+These tools are available for managing secrets in your cloud infrastructure. For how NubiferOS manages your local credentials, see [Credential Security](/docs/security/credential-security/).
 
 | Tool | Description | Use Case |
 |------|-------------|----------|
@@ -238,14 +238,14 @@ These tools are always installed and form the security foundation of NubiferOS. 
 
 | Tool | Purpose | Learn More |
 |------|---------|------------|
-| **GPG + pass** | Credential encryption | [Credential Security](/en/docs/security/credential-security/) |
-| **Firejail** | Workspace isolation | [Workspace Isolation](/en/docs/security/workspace-isolation/) |
-| **AppArmor** | Mandatory access control | [Security Architecture](/en/security/) |
-| **Wayland** | Display isolation (prevents keylogging) | [Security Architecture](/en/security/) |
-| **UFW** | Firewall | [Security Architecture](/en/security/) |
-| **fail2ban** | Intrusion prevention | [Security Architecture](/en/security/) |
-| **auditd** | Security audit logging | [Security Architecture](/en/security/) |
-| **LUKS** | Full disk encryption | [Security Architecture](/en/security/) |
+| **GPG + pass** | Credential encryption | [Credential Security](/docs/security/credential-security/) |
+| **Firejail** | Workspace isolation | [Workspace Isolation](/docs/security/workspace-isolation/) |
+| **AppArmor** | Mandatory access control | [Security Architecture](/security/) |
+| **Wayland** | Display isolation (prevents keylogging) | [Security Architecture](/security/) |
+| **UFW** | Firewall | [Security Architecture](/security/) |
+| **fail2ban** | Intrusion prevention | [Security Architecture](/security/) |
+| **auditd** | Security audit logging | [Security Architecture](/security/) |
+| **LUKS** | Full disk encryption | [Security Architecture](/security/) |
 
 ---
 

@@ -295,7 +295,7 @@ Workspaces use Linux namespaces via Firejail for strong isolation:
 
 **Example**: When you run `aws s3 ls` in Workspace A, it runs in a sandbox that can only see Workspace A's credentials. Even if malware compromises that process, it can't access Workspace B's credentials.
 
-Learn more: [Workspace Isolation](/en/docs/security/workspace-isolation/)
+Learn more: [Workspace Isolation](/docs/security/workspace-isolation/)
 
 ## Best Practices
 

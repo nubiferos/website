@@ -110,7 +110,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 4. **Follow the installer** — encryption is mandatory
 5. **Reboot** and enter your LUKS passphrase
 
-[Full Installation Guide →](/en/docs/getting-started/installation/)
+[Full Installation Guide →](/docs/getting-started/installation/)
 
 ---
 
@@ -129,7 +129,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 | **1.5 "Stratus" (Beta)** | Q2 2025 | Single-password boot, YubiKey support |
 | **2.0 "Cumulus"** | Q3-Q4 2025 | TPM support, team features |
 
-[View Full Roadmap →](/en/about/#roadmap)
+[View Full Roadmap →](/about/#roadmap)
 
 ---
 

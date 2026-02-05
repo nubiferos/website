@@ -83,5 +83,5 @@ Colors help you visually distinguish workspaces:
 
 ## Next Steps
 
-- Learn about [read-only mode](/en/docs/user-guide/)
-- Understand the [security model](/en/docs/security/)
+- Learn about [read-only mode](/docs/user-guide/)
+- Understand the [security model](/docs/security/)

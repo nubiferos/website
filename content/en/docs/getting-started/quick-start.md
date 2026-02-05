@@ -9,7 +9,7 @@ This guide gets you from first boot to managing cloud resources in under 10 minu
 
 ## Prerequisites
 
-- NubiferOS installed (see [Installation](/en/docs/getting-started/installation/))
+- NubiferOS installed (see [Installation](/docs/getting-started/installation/))
 - At least one cloud account (AWS, Azure, or GCP)
 - Your cloud credentials ready
 
@@ -243,7 +243,7 @@ nubifer-workspace list --verbose
 
 ## Next Steps
 
-- [Learn about workspaces in depth](/en/docs/user-guide/workspaces/)
-- [Understand credential management](/en/docs/user-guide/credentials/)
-- [Review the security model](/en/docs/security/threat-model/)
-- [See all included tools](/en/features/)
+- [Learn about workspaces in depth](/docs/user-guide/workspaces/)
+- [Understand credential management](/docs/user-guide/credentials/)
+- [Review the security model](/docs/security/threat-model/)
+- [See all included tools](/features/)

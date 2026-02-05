@@ -21,7 +21,7 @@ These components are always installed and cannot be disabled. They form the secu
 | **Wayland** | Modern display server | Apps can't keylog each other |
 | **AppArmor** | Limits application access | Compromised app can't escape |
 
-→ [Learn more about security architecture](/en/security/)
+→ [Learn more about security architecture](/security/)
 
 ## No Plaintext Credentials
 
@@ -42,7 +42,7 @@ When you run `aws s3 ls`, our CLI wrapper:
 2. Injects them directly into the CLI process
 3. Logs the access for audit
 
-→ [How credential security works](/en/docs/security/credential-security/)
+→ [How credential security works](/docs/security/credential-security/)
 
 ## Workspace Isolation
 
@@ -54,7 +54,7 @@ Each workspace runs in isolated Linux namespaces via Firejail:
 | **Processes** | Can't see or signal other workspace processes |
 | **IPC** | No shared memory attacks between workspaces |
 
-→ [How workspace isolation works](/en/docs/security/workspace-isolation/)
+→ [How workspace isolation works](/docs/security/workspace-isolation/)
 
 ## Read-Only Mode
 
@@ -75,7 +75,7 @@ sudo nubifer-workspace rw -d 15
 | **Read-Only** | 🔒 RO (green) | Destructive commands blocked |
 | **Read-Write** | 🔓 RW (red) | All commands allowed |
 
-→ [Workspace management guide](/en/docs/user-guide/workspaces/)
+→ [Workspace management guide](/docs/user-guide/workspaces/)
 
 ## Security Dashboard
 
@@ -109,7 +109,7 @@ Choose what you need during installation. Don't need Azure tools? Don't install 
 | **CI/CD & GitOps** | GitHub CLI, ArgoCD, Flux |
 | **IDEs** | VS Code, IntelliJ, PyCharm |
 
-→ [Full tool list](/en/docs/reference/tools/)
+→ [Full tool list](/docs/reference/tools/)
 
 ## Battle-Tested Tools
 

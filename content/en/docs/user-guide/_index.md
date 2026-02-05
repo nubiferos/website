@@ -26,7 +26,7 @@ nubifer-workspace switch aws-prod
 nubifer-workspace list
 ```
 
-**Learn more**: [Workspace Isolation](/en/docs/security/workspace-isolation/)
+**Learn more**: [Workspace Isolation](/docs/security/workspace-isolation/)
 
 ## Credential Management
 
@@ -43,7 +43,7 @@ nubifer-creds list
 nubifer-creds aws configure-sso
 ```
 
-**Learn more**: [Credential Security](/en/docs/security/credential-security/)
+**Learn more**: [Credential Security](/docs/security/credential-security/)
 
 ## Context Indicators
 
@@ -69,4 +69,4 @@ sudo nubifer-workspace rw
 sudo nubifer-workspace rw -d 30
 ```
 
-**Learn more**: [Workspace Isolation - Read-Only Mode](/en/docs/security/workspace-isolation/#read-only-mode)
+**Learn more**: [Workspace Isolation - Read-Only Mode](/docs/security/workspace-isolation/#read-only-mode)

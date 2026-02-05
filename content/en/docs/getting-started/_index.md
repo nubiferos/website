@@ -19,9 +19,9 @@ Before you begin, ensure you have:
 
 ## Installation Path
 
-1. **[Installation](/en/docs/getting-started/installation/)** - Download the ISO and create a bootable USB
-2. **[Quick Start](/en/docs/getting-started/quick-start/)** - Create your first workspace in 10 minutes
-3. **[First Workspace](/en/docs/getting-started/first-workspace/)** - Deep dive into workspace configuration
+1. **[Installation](/docs/getting-started/installation/)** - Download the ISO and create a bootable USB
+2. **[Quick Start](/docs/getting-started/quick-start/)** - Create your first workspace in 10 minutes
+3. **[First Workspace](/docs/getting-started/first-workspace/)** - Deep dive into workspace configuration
 
 ## What You'll Learn
 

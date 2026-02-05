@@ -10,33 +10,33 @@ Welcome to the NubiferOS documentation. Here you'll find everything you need to 
 
 New to NubiferOS? Start here:
 
-- [Installation Guide](/en/docs/getting-started/installation/) - Download and install NubiferOS
-- [Quick Start](/en/docs/getting-started/quick-start/) - Get up and running in 10 minutes
-- [First Workspace](/en/docs/getting-started/first-workspace/) - Create your first isolated workspace
+- [Installation Guide](/docs/getting-started/installation/) - Download and install NubiferOS
+- [Quick Start](/docs/getting-started/quick-start/) - Get up and running in 10 minutes
+- [First Workspace](/docs/getting-started/first-workspace/) - Create your first isolated workspace
 
 ## User Guide
 
 Learn how to use NubiferOS effectively:
 
-- [Workspace Management](/en/docs/user-guide/) - Create, switch, and manage workspaces
-- [Credential Management](/en/docs/security/credential-security/) - Securely store and use cloud credentials
-- [Context Indicators](/en/docs/user-guide/) - Visual feedback for active workspace
+- [Workspace Management](/docs/user-guide/) - Create, switch, and manage workspaces
+- [Credential Management](/docs/security/credential-security/) - Securely store and use cloud credentials
+- [Context Indicators](/docs/user-guide/) - Visual feedback for active workspace
 
 ## Security
 
 Understand how NubiferOS protects your credentials:
 
-- [Threat Model](/en/docs/security/threat-model/) - What we protect against (and what we don't)
-- [Credential Security](/en/docs/security/credential-security/) - GPG + pass encryption
-- [Workspace Isolation](/en/docs/security/workspace-isolation/) - Firejail namespaces and read-only mode
+- [Threat Model](/docs/security/threat-model/) - What we protect against (and what we don't)
+- [Credential Security](/docs/security/credential-security/) - GPG + pass encryption
+- [Workspace Isolation](/docs/security/workspace-isolation/) - Firejail namespaces and read-only mode
 
 ## Reference
 
 Technical reference documentation:
 
-- [Command Reference](/en/docs/reference/) - CLI commands and options
-- [Configuration Files](/en/docs/reference/#configuration-files) - Config file locations and formats
-- [Included Tools](/en/features/) - Complete list of pre-installed tools
+- [Command Reference](/docs/reference/) - CLI commands and options
+- [Configuration Files](/docs/reference/#configuration-files) - Config file locations and formats
+- [Included Tools](/features/) - Complete list of pre-installed tools
 
 ## Source Code
 

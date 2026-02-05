@@ -9,7 +9,7 @@ This guide walks you through installing NubiferOS, including important details a
 
 ## Download
 
-Download the latest NubiferOS ISO from our [download page](/en/download/).
+Download the latest NubiferOS ISO from our [download page](/download/).
 
 After downloading, verify the checksum:
 
@@ -246,7 +246,7 @@ nubifer-workspace create \
   --region us-east-1
 ```
 
-See the [Quick Start Guide](/en/docs/getting-started/quick-start/) for detailed workspace setup.
+See the [Quick Start Guide](/docs/getting-started/quick-start/) for detailed workspace setup.
 
 ## Security Architecture
 
@@ -328,6 +328,6 @@ gpg --full-generate-key
 
 ## Next Steps
 
-- [Quick Start Guide](/en/docs/getting-started/quick-start/) - Set up your first workspace
-- [Credential Security](/en/docs/security/credential-security/) - Understand how credentials are protected
-- [Workspace Isolation](/en/docs/security/workspace-isolation/) - Learn about namespace isolation
+- [Quick Start Guide](/docs/getting-started/quick-start/) - Set up your first workspace
+- [Credential Security](/docs/security/credential-security/) - Understand how credentials are protected
+- [Workspace Isolation](/docs/security/workspace-isolation/) - Learn about namespace isolation

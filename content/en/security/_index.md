@@ -7,7 +7,7 @@ description: "How NubiferOS protects your cloud credentials with defense-in-dept
 
 # Security Architecture
 
-NubiferOS is built with security as the foundation, not an afterthought. We publish our [threat model](/en/docs/security/threat-model/) so you can verify our claims and make informed decisions.
+NubiferOS is built with security as the foundation, not an afterthought. We publish our [threat model](/docs/security/threat-model/) so you can verify our claims and make informed decisions.
 
 ## Why Security Matters
 
@@ -206,7 +206,7 @@ We use proven tools instead of custom implementations:
 
 | Topic | Link |
 |-------|------|
-| **Threat Model** | [What we protect against](/en/docs/security/threat-model/) |
-| **Credential Security** | [How credentials are encrypted](/en/docs/security/credential-security/) |
-| **Workspace Isolation** | [How namespaces work](/en/docs/security/workspace-isolation/) |
+| **Threat Model** | [What we protect against](/docs/security/threat-model/) |
+| **Credential Security** | [How credentials are encrypted](/docs/security/credential-security/) |
+| **Workspace Isolation** | [How namespaces work](/docs/security/workspace-isolation/) |
 | **Source Code** | [Security documentation on GitHub](https://github.com/nubiferos/nubiferos/tree/main/docs) |

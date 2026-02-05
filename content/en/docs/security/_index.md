@@ -5,7 +5,7 @@ weight: 30
 description: "Understanding NubiferOS security architecture"
 ---
 
-Security is the foundation of NubiferOS, not an afterthought. We publish our [threat model](/en/docs/security/threat-model/) so you can verify our claims.
+Security is the foundation of NubiferOS, not an afterthought. We publish our [threat model](/docs/security/threat-model/) so you can verify our claims.
 
 ## Security Layers
 
@@ -31,9 +31,9 @@ NubiferOS implements defense in depth with eight security layers:
 
 ## Documentation
 
-- [Threat Model](/en/docs/security/threat-model/) - What we protect against and explicit boundaries
-- [Credential Security](/en/docs/security/credential-security/) - How credentials are encrypted and managed
-- [Workspace Isolation](/en/docs/security/workspace-isolation/) - Firejail namespaces and read-only mode
+- [Threat Model](/docs/security/threat-model/) - What we protect against and explicit boundaries
+- [Credential Security](/docs/security/credential-security/) - How credentials are encrypted and managed
+- [Workspace Isolation](/docs/security/workspace-isolation/) - Firejail namespaces and read-only mode
 
 ## Quick Summary
 

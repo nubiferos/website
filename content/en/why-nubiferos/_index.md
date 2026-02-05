@@ -142,6 +142,6 @@ Ready to try NubiferOS?
 
 | Step | Link |
 |------|------|
-| **Download** | [Get NubiferOS Alpha](/en/download/) |
-| **Quick Start** | [Create your first workspace](/en/docs/getting-started/quick-start/) |
-| **Learn More** | [Read the documentation](/en/docs/) |
+| **Download** | [Get NubiferOS Alpha](/download/) |
+| **Quick Start** | [Create your first workspace](/docs/getting-started/quick-start/) |
+| **Learn More** | [Read the documentation](/docs/) |

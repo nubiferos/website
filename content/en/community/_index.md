@@ -18,7 +18,7 @@ Need assistance? Here's where to find it:
 |---------|----------|------|
 | **Discord** | Real-time chat, quick questions | [Join Server](https://discord.gg/nubiferos) |
 | **GitHub Discussions** | Longer questions, feature ideas | [Start Discussion](https://github.com/nubiferos/nubiferos/discussions) |
-| **Documentation** | Guides, tutorials, reference | [Read Docs](/en/docs/) |
+| **Documentation** | Guides, tutorials, reference | [Read Docs](/docs/) |
 
 ## Give Feedback
 
@@ -131,8 +131,8 @@ We're committed to providing a welcoming and inclusive community for everyone.
 
 | Resource | Link |
 |----------|------|
-| **Download** | [Get NubiferOS](/en/download/) |
-| **Documentation** | [Read the Docs](/en/docs/) |
+| **Download** | [Get NubiferOS](/download/) |
+| **Documentation** | [Read the Docs](/docs/) |
 | **Source Code** | [GitHub](https://github.com/nubiferos/nubiferos) |
 | **Discord** | [Join Server](https://discord.gg/nubiferos) |
 | **Twitter** | [@nubiferos](https://twitter.com/nubiferos) |
