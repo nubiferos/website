@@ -15,29 +15,9 @@ This is alpha software intended for testing and feedback. Expect bugs and rough 
 
 ---
 
-## NubiferOS 1.0 "Nimbus" (Alpha)
+## Latest Releases
 
-The first public release of NubiferOS. Built on Debian 12 with GNOME/Wayland.
-
-<div style="background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 100%); padding: 2rem; border-radius: 12px; margin: 1.5rem 0;">
-<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-<div>
-<h3 style="color: white; margin: 0 0 0.5rem 0;">Installer Image (Recommended)</h3>
-<p style="color: rgba(255,255,255,0.8); margin: 0;">64-bit (AMD64) • ~3.0 GB • UEFI required</p>
-</div>
-<div>
-<a href="https://github.com/nubiferos/nubiferos/releases/latest/download/nubiferos-1.0-alpha-amd64.iso" class="btn btn-warning btn-lg" style="font-weight: 600;">
-<i class="fas fa-download me-2"></i>Download ISO
-</a>
-</div>
-</div>
-</div>
-
-| File | Size | Description |
-|------|------|-------------|
-| [nubiferos-1.0-alpha-amd64.iso](https://github.com/nubiferos/nubiferos/releases/latest/download/nubiferos-1.0-alpha-amd64.iso) | ~3.0 GB | Bootable installer image |
-| [SHA256SUMS](https://github.com/nubiferos/nubiferos/releases/latest/download/SHA256SUMS) | 1 KB | Checksum file |
-| [SHA256SUMS.gpg](https://github.com/nubiferos/nubiferos/releases/latest/download/SHA256SUMS.gpg) | 1 KB | GPG signature |
+{{< releases >}}
 
 ### What's Included
 
