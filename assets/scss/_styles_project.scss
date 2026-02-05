@@ -267,14 +267,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Feature cards in dark sections need light text
+// Feature cards in dark sections need appropriate styling
+// Cards have white/light backgrounds, so text should be dark
 .section-dark .feature-card {
+  // Card backgrounds are light (var(--card-bg)), so keep text dark for contrast
+  background: var(--card-bg);
+  
   h3, h4, h5 {
-    color: #fff !important;
+    color: #1e293b !important;
   }
   
   p {
-    color: #e2e8f0 !important;
+    color: #475569 !important;
   }
 }
 
