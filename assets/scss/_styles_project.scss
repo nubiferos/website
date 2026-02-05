@@ -252,18 +252,29 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   
-  h4 {
+  h3, h4, h5 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
     margin-bottom: 0.75rem;
   }
   
   p {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     font-size: 0.95rem;
     line-height: 1.7;
     margin: 0;
+  }
+}
+
+// Feature cards in dark sections need light text
+.section-dark .feature-card {
+  h3, h4, h5 {
+    color: #fff !important;
+  }
+  
+  p {
+    color: #e2e8f0 !important;
   }
 }
 
