@@ -537,13 +537,18 @@ table {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  table-layout: auto;
+  
+  th, td {
+    text-align: left;
+    vertical-align: top;
+  }
   
   th {
     background: #1E3A8A;
     color: #fff;
     font-weight: 600;
     padding: 1rem 1.25rem;
-    text-align: left;
   }
   
   td {
@@ -551,6 +556,12 @@ table {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-secondary);
     background: var(--card-bg);
+  }
+  
+  // First column styling - feature/item names
+  td:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
   }
   
   tr:last-child td {
