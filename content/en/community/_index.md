@@ -26,10 +26,10 @@ Help shape the future of NubiferOS! We use GitHub Discussions for community poll
 
 | Feedback Type | Where to Go |
 |---------------|-------------|
-| **Vote on features** | [Polls & Feedback](https://github.com/nubiferos/nubiferos/discussions/categories/polls-feedback) |
-| **Suggest a feature** | [Ideas & Feature Requests](https://github.com/nubiferos/nubiferos/discussions/categories/ideas) |
-| **Share your use case** | [Show & Tell](https://github.com/nubiferos/nubiferos/discussions/categories/show-and-tell) |
-| **Ask a question** | [Q&A](https://github.com/nubiferos/nubiferos/discussions/categories/q-a) |
+| **Vote on features** | [Polls and Feedback](https://github.com/nubiferos/nubiferos/discussions/categories/polls-feedback) |
+| **Suggest a feature** | [Ideas and Feature Requests](https://github.com/nubiferos/nubiferos/discussions/categories/ideas) |
+| **Share your use case** | [Show and Tell](https://github.com/nubiferos/nubiferos/discussions/categories/show-and-tell) |
+| **Ask a question** | [Q and A](https://github.com/nubiferos/nubiferos/discussions/categories/q-a) |
 
 **Current topics we'd love feedback on:**
 - Boot security options (keyfile vs TPM)
