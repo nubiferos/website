@@ -43,5 +43,5 @@ Technical reference documentation:
 NubiferOS is open source under GPL-3.0:
 
 - [GitHub Repository](https://github.com/nubiferos/nubiferos)
-- [Components](https://github.com/nubiferos/nubiferos/tree/main/components)
-- [Documentation Source](https://github.com/nubiferos/nubiferos/tree/main/docs)
+- [Components](https://github.com/nubiferos/nubiferos/tree/trunk/components)
+- [Documentation Source](https://github.com/nubiferos/nubiferos/tree/trunk/docs)

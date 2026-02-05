@@ -209,4 +209,4 @@ We use proven tools instead of custom implementations:
 | **Threat Model** | [What we protect against](/docs/security/threat-model/) |
 | **Credential Security** | [How credentials are encrypted](/docs/security/credential-security/) |
 | **Workspace Isolation** | [How namespaces work](/docs/security/workspace-isolation/) |
-| **Source Code** | [Security documentation on GitHub](https://github.com/nubiferos/nubiferos/tree/main/docs) |
+| **Source Code** | [Security documentation on GitHub](https://github.com/nubiferos/nubiferos/tree/trunk/docs) |

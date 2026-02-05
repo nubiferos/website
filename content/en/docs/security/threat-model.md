@@ -308,6 +308,6 @@ Every NubiferOS release includes comprehensive supply chain security:
 ## Source Code
 
 View the complete security documentation:
-- [THREAT_MODEL.md](https://github.com/nubiferos/nubiferos/blob/main/docs/THREAT_MODEL.md)
-- [SECURITY_SUMMARY.md](https://github.com/nubiferos/nubiferos/blob/main/docs/SECURITY_SUMMARY.md)
-- [SECURITY_NON_GOALS.md](https://github.com/nubiferos/nubiferos/blob/main/docs/SECURITY_NON_GOALS.md)
+- [THREAT_MODEL.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/THREAT_MODEL.md)
+- [SECURITY_SUMMARY.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/SECURITY_SUMMARY.md)
+- [SECURITY_NON_GOALS.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/SECURITY_NON_GOALS.md)

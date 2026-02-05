@@ -394,6 +394,6 @@ nubifer-workspace delete <workspace-id>
 
 ## Source Code
 
-- [Workspace Manager Component](https://github.com/nubiferos/nubiferos/tree/main/components/workspace-manager)
-- [Namespace Isolation Explained](https://github.com/nubiferos/nubiferos/blob/main/docs/NAMESPACE_ISOLATION_EXPLAINED.md)
-- [Firejail Integration](https://github.com/nubiferos/nubiferos/blob/main/components/workspace-manager/FIREJAIL_INTEGRATION.md)
+- [Workspace Manager Component](https://github.com/nubiferos/nubiferos/tree/trunk/components/workspace-manager)
+- [Namespace Isolation Explained](https://github.com/nubiferos/nubiferos/blob/trunk/docs/NAMESPACE_ISOLATION_EXPLAINED.md)
+- [Firejail Integration](https://github.com/nubiferos/nubiferos/blob/trunk/components/workspace-manager/FIREJAIL_INTEGRATION.md)

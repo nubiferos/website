@@ -52,7 +52,7 @@ Visual feedback helps you always know which workspace is active:
 - GNOME panel indicator
 - Desktop wallpaper can change per workspace
 
-**Source**: [Context Indicator Component](https://github.com/nubiferos/nubiferos/tree/main/components/context-indicator)
+**Source**: [Context Indicator Component](https://github.com/nubiferos/nubiferos/tree/trunk/components/context-indicator)
 
 ## Read-Only Mode
 

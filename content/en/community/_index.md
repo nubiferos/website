@@ -67,7 +67,7 @@ Found a bug? Have a feature request?
 | 4. Test | Run tests and verify your changes work |
 | 5. PR | Submit a pull request with a clear description |
 
-[Read Contributing Guide](https://github.com/nubiferos/nubiferos/blob/main/CONTRIBUTING.md)
+[Read Contributing Guide](https://github.com/nubiferos/nubiferos/blob/trunk/CONTRIBUTING.md)
 
 ### Improve Documentation
 
@@ -116,7 +116,7 @@ We're committed to providing a welcoming and inclusive community for everyone.
 - Trolling or inflammatory comments
 - Sharing others' private information
 
-[Read Full Code of Conduct](https://github.com/nubiferos/nubiferos/blob/main/CODE_OF_CONDUCT.md)
+[Read Full Code of Conduct](https://github.com/nubiferos/nubiferos/blob/trunk/CODE_OF_CONDUCT.md)
 
 ## Community Stats
 

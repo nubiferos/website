@@ -533,6 +533,6 @@ nubifer-creds import aws-cli --verbose
 
 ## Source Code
 
-- [Credential Manager Component](https://github.com/nubiferos/nubiferos/tree/main/components/credential-manager)
-- [CREDENTIAL_SECURITY.md](https://github.com/nubiferos/nubiferos/blob/main/docs/CREDENTIAL_SECURITY.md)
-- [GPG Setup Guide](https://github.com/nubiferos/nubiferos/blob/main/docs/guides/GPG_SETUP_GUIDE.md)
+- [Credential Manager Component](https://github.com/nubiferos/nubiferos/tree/trunk/components/credential-manager)
+- [CREDENTIAL_SECURITY.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/CREDENTIAL_SECURITY.md)
+- [GPG Setup Guide](https://github.com/nubiferos/nubiferos/blob/trunk/docs/guides/GPG_SETUP_GUIDE.md)

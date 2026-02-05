@@ -289,5 +289,5 @@ nubifer-tools update-all
 
 ## Source Code
 
-- [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/main/docs/guides/INCLUDED_TOOLS.md)
-- [IDE_PLUGINS.md](https://github.com/nubiferos/nubiferos/blob/main/docs/guides/IDE_PLUGINS.md)
+- [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/guides/INCLUDED_TOOLS.md)
+- [IDE_PLUGINS.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/guides/IDE_PLUGINS.md)

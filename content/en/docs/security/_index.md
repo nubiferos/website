@@ -65,6 +65,6 @@ We use battle-tested, audited tools rather than custom solutions:
 
 ## Source Code
 
-- [Security Documentation](https://github.com/nubiferos/nubiferos/tree/main/docs)
-- [SECURITY_SUMMARY.md](https://github.com/nubiferos/nubiferos/blob/main/docs/SECURITY_SUMMARY.md)
-- [THREAT_MODEL.md](https://github.com/nubiferos/nubiferos/blob/main/docs/THREAT_MODEL.md)
+- [Security Documentation](https://github.com/nubiferos/nubiferos/tree/trunk/docs)
+- [SECURITY_SUMMARY.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/SECURITY_SUMMARY.md)
+- [THREAT_MODEL.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/THREAT_MODEL.md)

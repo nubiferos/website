@@ -142,4 +142,4 @@ NubiferOS is open source under GPL-3.0.
 | **GitHub Repository** | [github.com/nubiferos/nubiferos](https://github.com/nubiferos/nubiferos) |
 | **Release Notes** | [GitHub Releases](https://github.com/nubiferos/nubiferos/releases) |
 | **Report Issues** | [GitHub Issues](https://github.com/nubiferos/nubiferos/issues) |
-| **Build Scripts** | [Build Documentation](https://github.com/nubiferos/nubiferos/tree/main/build) |
+| **Build Scripts** | [Build Documentation](https://github.com/nubiferos/nubiferos/tree/trunk/build) |

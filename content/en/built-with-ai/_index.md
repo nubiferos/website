@@ -184,7 +184,7 @@ Interested in spec-driven AI development?
 |----------|------|
 | **Kiro IDE** | [kiro.dev](https://kiro.dev) |
 | **Claude** | [claude.ai](https://claude.ai) |
-| **Our Specs** | [GitHub - .kiro/specs](https://github.com/nubiferos/nubiferos/tree/main/.kiro/specs) |
+| **Our Specs** | [GitHub - .kiro/specs](https://github.com/nubiferos/nubiferos/tree/trunk/.kiro/specs) |
 | **NubiferOS Source** | [GitHub Repository](https://github.com/nubiferos/nubiferos) |
 
 ## Questions?

@@ -64,7 +64,7 @@ sudo nubifer-workspace rw
 sudo nubifer-workspace rw -d 30
 ```
 
-**Source**: [Context Manager Component](https://github.com/nubiferos/nubiferos/tree/main/components/context-manager)
+**Source**: [Context Manager Component](https://github.com/nubiferos/nubiferos/tree/trunk/components/context-manager)
 
 ## Credential Commands
 
@@ -111,7 +111,7 @@ nubifer-creds rotate --all
 nubifer-creds remove <workspace-name>
 ```
 
-**Source**: [Credential Manager Component](https://github.com/nubiferos/nubiferos/tree/main/components/credential-manager)
+**Source**: [Credential Manager Component](https://github.com/nubiferos/nubiferos/tree/trunk/components/credential-manager)
 
 ## Configuration Files
 
@@ -141,10 +141,10 @@ GOOGLE_APPLICATION_CREDENTIALS, GOOGLE_CLOUD_PROJECT
 
 See the [Features page](/features/) for a complete list of pre-installed tools.
 
-**Source**: [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/main/docs/guides/INCLUDED_TOOLS.md)
+**Source**: [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/guides/INCLUDED_TOOLS.md)
 
 ## Source Code
 
 - [NubiferOS Repository](https://github.com/nubiferos/nubiferos)
-- [Components](https://github.com/nubiferos/nubiferos/tree/main/components)
-- [Documentation](https://github.com/nubiferos/nubiferos/tree/main/docs)
+- [Components](https://github.com/nubiferos/nubiferos/tree/trunk/components)
+- [Documentation](https://github.com/nubiferos/nubiferos/tree/trunk/docs)
