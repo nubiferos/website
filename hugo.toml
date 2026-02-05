@@ -4,6 +4,8 @@ languageCode = "en-us"
 enableGitInfo = false
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+relativeURLs = true
+canonicalifyURLs = false
 
 [languages]
   [languages.en]
