@@ -134,5 +134,5 @@ We use proven, audited tools—not custom implementations:
 
 ## Ready to Try It?
 
-<a href="/en/download/" class="btn btn-warning btn-lg"><i class="fas fa-download me-2"></i>Download NubiferOS</a>
-<a href="/en/docs/getting-started/quick-start/" class="btn btn-outline-primary btn-lg ms-2">Quick Start Guide</a>
+<a href="/website/download/" class="btn btn-warning btn-lg"><i class="fas fa-download me-2"></i>Download NubiferOS</a>
+<a href="/website/docs/getting-started/quick-start/" class="btn btn-outline-primary btn-lg ms-2">Quick Start Guide</a>
