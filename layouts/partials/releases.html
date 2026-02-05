@@ -1,41 +1,64 @@
 {{/* Renders releases from data/releases.json */}}
 {{ $releases := site.Data.releases }}
 {{ if $releases }}
-  {{ range first 3 $releases }}
-  <div class="release-card mb-4 p-4 rounded-3" style="background: var(--card-bg); border: 1px solid var(--card-border);">
-    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
-      <div>
-        <h3 class="h5 mb-1">
-          <i class="fas fa-tag me-2 text-warning"></i>{{ .name | default .tag_name }}
-        </h3>
-        <small class="text-muted">
-          Released {{ .published_at | time.Format "January 2, 2006" }}
-          {{ if .prerelease }}<span class="badge bg-warning text-dark ms-2">Pre-release</span>{{ end }}
-        </small>
-      </div>
-      <div>
-        {{ range .assets }}
-          {{ if hasSuffix .name ".iso" }}
-          <a href="{{ .browser_download_url }}" class="btn btn-warning btn-sm">
-            <i class="fas fa-download me-1"></i>Download ISO
-          </a>
+  {{ range $index, $release := first 3 $releases }}
+  {{ $isLatest := eq $index 0 }}
+  <div class="release-card mb-4 rounded-3 overflow-hidden" style="border: 1px solid var(--card-border); {{ if $isLatest }}border: 2px solid #F59E0B;{{ end }}">
+    
+    {{/* Header with download button */}}
+    <div class="p-4" style="{{ if $isLatest }}background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 100%);{{ else }}background: var(--bg-tertiary);{{ end }}">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+          <h3 class="h4 mb-1 {{ if $isLatest }}text-white{{ end }}">
+            {{ if $isLatest }}<i class="fas fa-star me-2 text-warning"></i>{{ else }}<i class="fas fa-tag me-2"></i>{{ end }}
+            {{ .name | default .tag_name }}
+          </h3>
+          <div class="{{ if $isLatest }}text-light{{ else }}text-muted{{ end }}">
+            <small>
+              <i class="fas fa-calendar me-1"></i>{{ .published_at | time.Format "January 2, 2006" }}
+              {{ if .prerelease }}<span class="badge bg-warning text-dark ms-2">Alpha</span>{{ end }}
+            </small>
+          </div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          {{ range .assets }}
+            {{ if hasSuffix .name ".iso" }}
+            <a href="{{ .browser_download_url }}" class="btn {{ if $isLatest }}btn-warning{{ else }}btn-outline-primary{{ end }}">
+              <i class="fas fa-download me-2"></i>Download ISO
+            </a>
+            {{ end }}
           {{ end }}
-        {{ end }}
+          {{ range .assets }}
+            {{ if hasSuffix .name "SHA256SUMS" }}
+            <a href="{{ .browser_download_url }}" class="btn btn-outline-{{ if $isLatest }}light{{ else }}secondary{{ end }} btn-sm">
+              <i class="fas fa-fingerprint me-1"></i>Checksum
+            </a>
+            {{ end }}
+          {{ end }}
+        </div>
       </div>
     </div>
     
+    {{/* Release notes - full display, no scroll */}}
     {{ if .body }}
-    <div class="release-notes small" style="max-height: 150px; overflow-y: auto;">
-      {{ .body | markdownify }}
+    <div class="p-4" style="background: var(--card-bg);">
+      <div class="release-notes">
+        {{ .body | markdownify }}
+      </div>
     </div>
     {{ end }}
     
-    <div class="mt-3">
-      <small class="text-muted">
-        <strong>Assets:</strong>
+    {{/* Assets footer */}}
+    <div class="px-4 py-3" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+      <small>
+        <strong>All Downloads:</strong>
         {{ range .assets }}
-          <a href="{{ .browser_download_url }}" class="me-3 text-decoration-none">
-            {{ if hasSuffix .name ".iso" }}<i class="fas fa-compact-disc me-1"></i>{{ else if hasSuffix .name "SHA256SUMS" }}<i class="fas fa-fingerprint me-1"></i>{{ else }}<i class="fas fa-file me-1"></i>{{ end }}{{ .name }}
+          <a href="{{ .browser_download_url }}" class="ms-3 text-decoration-none">
+            {{ if hasSuffix .name ".iso" }}<i class="fas fa-compact-disc me-1"></i>
+            {{ else if hasSuffix .name "SHA256SUMS" }}<i class="fas fa-fingerprint me-1"></i>
+            {{ else if hasSuffix .name ".asc" }}<i class="fas fa-key me-1"></i>
+            {{ else }}<i class="fas fa-file me-1"></i>{{ end }}
+            {{ .name }}
           </a>
         {{ end }}
       </small>
@@ -43,5 +66,7 @@
   </div>
   {{ end }}
 {{ else }}
-  <p class="text-muted">No releases available yet. Check back soon!</p>
+  <div class="alert alert-info">
+    <i class="fas fa-info-circle me-2"></i>No releases available yet. Check back soon!
+  </div>
 {{ end }}
