@@ -47,11 +47,7 @@ jobs:
         run: npm ci
 
       - name: Init Hugo Modules
-        run: |
-          hugo mod init github.com/nubiferos/website || true
-          hugo mod get github.com/google/docsy@v0.10.0
-          hugo mod get github.com/google/docsy/dependencies@v0.7.2
-          hugo mod tidy
+        run: hugo mod tidy
 
       - name: Setup Pages
         id: pages
