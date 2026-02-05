@@ -774,14 +774,26 @@ table {
 // Docsy uses inline SVG, so we hide it and use background-image instead
 .td-navbar .navbar-brand__logo.navbar-logo {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: url("/website/img/icon-navbar.png") no-repeat center center;
   background-size: contain;
+  vertical-align: middle;
+  margin-right: 0.5rem;
   
   // Hide the inline SVG
   svg {
     display: none !important;
+  }
+}
+
+// Align navbar brand text with logo
+.td-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  
+  .navbar-brand__name {
+    line-height: 1;
   }
 }
 
