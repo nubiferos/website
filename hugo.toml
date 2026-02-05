@@ -71,19 +71,19 @@ defaultContentLanguageInSubdir = true
   [[menu.main]]
     name = "Download"
     weight = 10
-    url = "/en/download/"
+    url = "/download/"
   [[menu.main]]
     name = "Documentation"
     weight = 20
-    url = "/en/docs/"
+    url = "/docs/"
   [[menu.main]]
     name = "About"
     weight = 30
-    url = "/en/about/"
+    url = "/about/"
   [[menu.main]]
     name = "Community"
     weight = 40
-    url = "/en/community/"
+    url = "/community/"
 
 [module]
   [module.hugoVersion]
