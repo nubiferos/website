@@ -3,7 +3,7 @@ title = "NubiferOS"
 languageCode = "en-us"
 enableGitInfo = false
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [languages]
   [languages.en]
