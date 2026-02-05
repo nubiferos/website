@@ -4,8 +4,6 @@ languageCode = "en-us"
 enableGitInfo = false
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-relativeURLs = true
-canonifyURLs = false
 
 [languages]
   [languages.en]
@@ -65,7 +63,8 @@ canonifyURLs = false
       icon = "fab fa-discord"
       desc = "Chat with the community"
 
-  # Logo is automatically loaded from assets/icons/logo.svg by Docsy
+  [params.logos]
+    navbar = "img/logo-light.png"
 
 # Main navigation menu
 [menu]
