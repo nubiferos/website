@@ -35,7 +35,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.146.0'
+          hugo-version: '0.128.0'
           extended: true
 
       - name: Setup Node.js
@@ -50,7 +50,9 @@ jobs:
         run: hugo mod init github.com/nubiferos/website || true
 
       - name: Get Hugo Modules
-        run: hugo mod get -u
+        run: |
+          hugo mod get github.com/google/docsy@v0.10.0
+          hugo mod get github.com/google/docsy/dependencies@v0.7.2
 
       - name: Setup Pages
         id: pages
