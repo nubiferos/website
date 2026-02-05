@@ -8,5 +8,6 @@
 {{- if $isExternal -}}
 <a href="{{ $url }}"{{ with $title }} title="{{ . }}"{{ end }} target="_blank" rel="noopener noreferrer">{{ $text }}</a>
 {{- else -}}
-<a href="{{ $url }}"{{ with $title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+{{- /* Use relURL to prepend baseURL for internal links */ -}}
+<a href="{{ $url | relURL }}"{{ with $title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
 {{- end -}}
