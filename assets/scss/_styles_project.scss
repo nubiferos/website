@@ -268,17 +268,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Feature cards in dark sections need appropriate styling
-// Cards have white/light backgrounds, so text should be dark
+// In light mode: cards have white bg, need dark text
+// In dark mode: cards have dark bg, need light text
 .section-dark .feature-card {
-  // Card backgrounds are light (var(--card-bg)), so keep text dark for contrast
   background: var(--card-bg);
   
+  h3, h4, h5 {
+    color: var(--text-primary) !important;
+  }
+  
+  p {
+    color: var(--text-secondary) !important;
+  }
+}
+
+// Light mode override: force dark text on white card backgrounds in dark sections
+:root .section-dark .feature-card {
   h3, h4, h5 {
     color: #1e293b !important;
   }
   
   p {
     color: #475569 !important;
+  }
+}
+
+// Dark mode: use theme colors (light text on dark cards)
+[data-bs-theme="dark"] .section-dark .feature-card {
+  h3, h4, h5 {
+    color: #f1f5f9 !important;
+  }
+  
+  p {
+    color: #cbd5e1 !important;
   }
 }
 
