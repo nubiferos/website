@@ -2,7 +2,7 @@ name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["trunk"]
   repository_dispatch:
     types: [new-release]
   workflow_dispatch:

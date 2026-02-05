@@ -771,9 +771,18 @@ table {
 // LOGO DARK/LIGHT MODE SUPPORT
 // ============================================
 // Navbar always has dark background, so use white/light logo
-.td-navbar .navbar-brand img {
-  content: url("/img/logo-navbar.png");
+// Docsy uses inline SVG, so we hide it and use background-image instead
+.td-navbar .navbar-brand__logo.navbar-logo {
+  display: inline-block;
+  width: 40px;
   height: 40px;
+  background: url("/website/img/icon-navbar.png") no-repeat center center;
+  background-size: contain;
+  
+  // Hide the inline SVG
+  svg {
+    display: none !important;
+  }
 }
 
 // For any other logo usage that needs dark mode switching
