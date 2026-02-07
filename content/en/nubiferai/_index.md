@@ -36,14 +36,7 @@ You describe it    -->    Seed interprets    -->    AI generates    -->    You r
 
 NubiferAI includes a native GTK4 desktop application with a prompt-driven workflow and one-click quick actions.
 
-<div class="row my-4">
-  <div class="col-12">
-    <div class="rounded-3 overflow-hidden shadow" style="border: 2px solid var(--card-border);">
-      <img src="/img/nubiferai/home-page.png" alt="NubiferAI home page with prompt and quick actions" class="img-fluid w-100">
-    </div>
-    <p class="text-center text-muted mt-2"><small>Home page — describe what you want or pick a quick action</small></p>
-  </div>
-</div>
+{{< screenshot src="img/nubiferai/home-page.png" alt="NubiferAI home page with prompt and quick actions" caption="Home page — describe what you want or pick a quick action" >}}
 
 ### Quick Actions by Cloud Provider
 
@@ -57,16 +50,10 @@ Seeds are AI personas — specialized system prompts that give NubiferAI deep ex
 
 <div class="row my-4">
   <div class="col-md-6 mb-3">
-    <div class="rounded-3 overflow-hidden shadow" style="border: 2px solid var(--card-border);">
-      <img src="/img/nubiferai/seeds-browser.png" alt="NubiferAI seeds browser with tag filters" class="img-fluid w-100">
-    </div>
-    <p class="text-center text-muted mt-2"><small>Seeds browser — search and filter by tag</small></p>
+    {{< screenshot src="img/nubiferai/seeds-browser.png" alt="NubiferAI seeds browser with tag filters" caption="Seeds browser — search and filter by tag" >}}
   </div>
   <div class="col-md-6 mb-3">
-    <div class="rounded-3 overflow-hidden shadow" style="border: 2px solid var(--card-border);">
-      <img src="/img/nubiferai/seed-cards-detail.png" alt="NubiferAI seed cards with descriptions and tags" class="img-fluid w-100">
-    </div>
-    <p class="text-center text-muted mt-2"><small>Seed cards — each specialist with its tools and output formats</small></p>
+    {{< screenshot src="img/nubiferai/seed-cards-detail.png" alt="NubiferAI seed cards with descriptions and tags" caption="Seed cards — each specialist with its tools and output formats" >}}
   </div>
 </div>
 
@@ -90,10 +77,7 @@ Switch providers at any time — use free local models for testing, or premium A
 
 <div class="row my-4">
   <div class="col-md-6 mx-auto">
-    <div class="rounded-3 overflow-hidden shadow" style="border: 2px solid var(--card-border);">
-      <img src="/img/nubiferai/provider-dropdown.png" alt="NubiferAI provider selection dropdown" class="img-fluid w-100">
-    </div>
-    <p class="text-center text-muted mt-2"><small>Switch providers and models from the header bar</small></p>
+    {{< screenshot src="img/nubiferai/provider-dropdown.png" alt="NubiferAI provider selection dropdown" caption="Switch providers and models from the header bar" >}}
   </div>
 </div>
 

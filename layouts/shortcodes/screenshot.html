@@ -1,0 +1,8 @@
+{{/* Screenshot shortcode - renders an image with proper baseURL handling */}}
+{{/* Usage: {{< screenshot src="img/nubiferai/home-page.png" alt="Description" caption="Caption text" >}} */}}
+<div class="rounded-3 overflow-hidden shadow" style="border: 2px solid var(--card-border);">
+  <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" class="img-fluid w-100">
+</div>
+{{ with .Get "caption" }}
+<p class="text-center text-muted mt-2"><small>{{ . }}</small></p>
+{{ end }}
