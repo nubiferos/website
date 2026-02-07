@@ -768,6 +768,48 @@ table {
 
 
 // ============================================
+// PAGE-TOC LAYOUT - Full-width content with right TOC
+// ============================================
+.td-page-toc {
+  .td-content {
+    max-width: none;
+    padding: 2.5rem 3rem;
+    padding-top: 0;
+  }
+
+  .td-main {
+    padding-top: 5.5rem;
+  }
+
+  // TOC sidebar
+  .td-sidebar-toc {
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 1199px) {
+    .td-main {
+      padding-top: 5.5rem;
+    }
+
+    .td-content {
+      padding: 1.5rem;
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .td-main {
+      padding-top: 4.5rem;
+    }
+
+    .td-content {
+      padding: 1rem;
+      padding-top: 0;
+    }
+  }
+}
+
+// ============================================
 // LOGO DARK/LIGHT MODE SUPPORT
 // ============================================
 // Navbar always has dark background, so use white/light logo
