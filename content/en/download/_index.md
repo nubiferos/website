@@ -93,7 +93,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 ---
 
-## Past Releases
+## Previous Releases
 
 | Version | Release Date | Status | Notes |
 |---------|--------------|--------|-------|

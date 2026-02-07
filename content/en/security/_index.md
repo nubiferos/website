@@ -8,7 +8,7 @@ type: page-toc
 
 NubiferOS is built with security as the foundation, not an afterthought. We publish our [threat model](/docs/security/threat-model/) so you can verify our claims and make informed decisions.
 
-## Why It Matters
+## Why Security Matters
 
 Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:
 - Unauthorized resource creation (cryptomining)
@@ -18,7 +18,7 @@ Cloud credentials are the keys to your infrastructure. A leaked AWS access key c
 
 **NubiferOS protects against these threats with multiple security layers.**
 
-## Components
+## Security Components
 
 These are always installed and cannot be disabled:
 
@@ -171,7 +171,7 @@ We use proven tools instead of custom implementations:
 | **Wayland** | Display isolation | 2012 |
 | **LUKS** | Disk encryption | 2004 |
 
-## We Protect
+## What We Protect
 
 | Threat | Protection | Status |
 |--------|------------|--------|

@@ -120,7 +120,7 @@ NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools
 | **Embedded development** | Yocto, Buildroot |
 | **Server deployment** | Debian, Ubuntu Server, RHEL |
 
-## Summary
+## Comparison
 
 | Feature | Ubuntu | Kali | Custom | NubiferOS |
 |---------|--------|------|--------|-----------|

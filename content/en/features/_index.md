@@ -8,7 +8,7 @@ type: page-toc
 
 NubiferOS is built for cloud engineers who manage multiple accounts and need security they can trust. Here's what sets it apart.
 
-## Security
+## Security by Default
 
 These components are always installed and cannot be disabled. They form the security foundation.
 
@@ -43,7 +43,7 @@ When you run `aws s3 ls`, our CLI wrapper:
 
 → [How credential security works](/docs/security/credential-security/)
 
-## Workspaces
+## Workspace Isolation
 
 Each workspace runs in isolated Linux namespaces via Firejail:
 
@@ -76,7 +76,7 @@ sudo nubifer-workspace rw -d 15
 
 → [Workspace management guide](/docs/user-guide/workspaces/)
 
-## Dashboard
+## Security Dashboard
 
 Monitor your security posture in real-time:
 

@@ -24,7 +24,7 @@ Cloud engineers face real risks every day:
 
 **Nubifer** (NOO-beh-fehr /ˈnuː.bɛ.fɛr/) comes from Latin meaning "cloud-bearer"—fitting for a workstation designed to carry your cloud workloads safely.
 
-## Philosophy
+## Design Philosophy
 
 ### 1. Security First
 
@@ -49,7 +49,7 @@ All code is open source under GPL-3.0. You can audit every line that touches you
 
 Workspace isolation significantly reduces the risk of wrong-account operations. Read-only mode lets you lock workspaces to block destructive commands. Visual indicators ensure you always know which account is active.
 
-## Foundation
+## Technical Foundation
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|

@@ -116,7 +116,7 @@ We're committed to providing a welcoming and inclusive community for everyone.
 
 [Read Full Code of Conduct](https://github.com/nubiferos/nubiferos/blob/trunk/CODE_OF_CONDUCT.md)
 
-## Stats
+## Community Stats
 
 | Metric | Value |
 |--------|-------|

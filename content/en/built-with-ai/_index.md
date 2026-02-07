@@ -29,7 +29,7 @@ We used three primary AI tools throughout development:
 
 **Total development time**: ~3-4 months from first commit to alpha release.
 
-## Spec-Driven Dev
+## Spec-Driven Development
 
 Kiro's spec-driven workflow was central to our development process:
 
@@ -131,7 +131,7 @@ Building a Linux distribution with AI assistance wasn't without obstacles:
 | **Edge cases** | Real-world scenarios AI missed |
 | **Final approval** | Every change reviewed before merge |
 
-## Lessons
+## Lessons Learned
 
 ### For AI-Assisted Development
 
@@ -188,7 +188,7 @@ Interested in spec-driven AI development?
 | **Our Specs** | [GitHub - custom-linux-distro tasks](https://github.com/nubiferos/nubiferos/blob/trunk/.kiro/specs/custom-linux-distro/tasks.md) |
 | **NubiferOS Source** | [GitHub Repository](https://github.com/nubiferos/nubiferos) |
 
-## Explore
+## Explore NubiferOS
 
 | Resource | Link |
 |----------|------|
