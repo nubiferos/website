@@ -761,27 +761,26 @@ table {
 .td-page-toc {
   .td-content {
     max-width: none;
-    padding: 2.5rem 3rem;
+    padding: 0 3rem 2.5rem;
+  }
+
+  // Override the general .td-main main rule to prevent stacking
+  .td-main main {
     padding-top: 0;
   }
 
   .td-main {
-    padding-top: 5.5rem;
+    padding-top: 5rem;
   }
 
-  // TOC sidebar
+  // TOC sidebar - align with content
   .td-sidebar-toc {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
 
   @media (max-width: 1199px) {
-    .td-main {
-      padding-top: 5.5rem;
-    }
-
     .td-content {
-      padding: 1.5rem;
-      padding-top: 0;
+      padding: 0 1.5rem 1.5rem;
     }
   }
 
