@@ -14,7 +14,7 @@ This is alpha software intended for testing and feedback. Expect bugs and rough 
 
 ---
 
-## Latest Releases
+## Choose Your Edition
 
 {{< releases >}}
 

@@ -1,0 +1,34 @@
+- id: base
+  name: "NubiferOS"
+  icon: "fas fa-shield-alt"
+  description: "Core secure workstation for cloud engineers"
+  features:
+    - "Workspace isolation"
+    - "Encrypted credentials (GPG + pass)"
+    - "50+ cloud tools pre-installed"
+    - "LUKS full disk encryption"
+    - "Read-only mode"
+    - "Security dashboard"
+
+- id: ai
+  name: "NubiferOS + AI"
+  icon: "fas fa-robot"
+  pattern: "-ai-"
+  description: "Everything in Base plus AI-native cloud operations"
+  features:
+    - "Everything in Base"
+    - "NubiferAI GTK app"
+    - "35 AI seeds"
+    - "Ollama pre-installed"
+    - "Multi-provider support"
+
+- id: tpm
+  name: "NubiferOS + TPM"
+  icon: "fas fa-microchip"
+  pattern: "-tpm-"
+  description: "Everything in Base plus TPM 2.0 secure boot"
+  features:
+    - "Everything in Base"
+    - "TPM 2.0 boot"
+    - "LUKS2 + Argon2id"
+    - "Secure Boot enforcement"
