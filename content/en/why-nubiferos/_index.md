@@ -3,6 +3,7 @@ title: "Why NubiferOS?"
 linkTitle: "Why NubiferOS"
 weight: 35
 description: "How NubiferOS compares to other options for cloud engineers"
+type: page-toc
 ---
 
 # Why NubiferOS?

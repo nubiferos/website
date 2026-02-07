@@ -3,6 +3,7 @@ title: "Download NubiferOS"
 linkTitle: "Download"
 weight: 10
 description: "Get NubiferOS Alpha and start managing your cloud accounts securely"
+type: page-toc
 ---
 
 # Download NubiferOS

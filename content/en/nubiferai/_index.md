@@ -3,6 +3,7 @@ title: "NubiferAI"
 linkTitle: "NubiferAI"
 weight: 15
 description: "AI-native cloud operations - describe what you want, get infrastructure-as-code"
+type: page-toc
 ---
 
 # NubiferAI

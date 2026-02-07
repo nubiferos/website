@@ -3,6 +3,7 @@ title: "Features"
 linkTitle: "Features"
 weight: 15
 description: "What makes NubiferOS the secure choice for cloud engineers"
+type: page-toc
 ---
 
 # Features

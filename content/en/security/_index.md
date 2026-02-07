@@ -3,6 +3,7 @@ title: "Security Architecture"
 linkTitle: "Security"
 weight: 25
 description: "How NubiferOS protects your cloud credentials with defense-in-depth"
+type: page-toc
 ---
 
 # Security Architecture

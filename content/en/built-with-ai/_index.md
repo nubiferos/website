@@ -3,6 +3,7 @@ title: "Built with AI"
 linkTitle: "Built with AI"
 weight: 40
 description: "How we built NubiferOS using AI-assisted development with Kiro, Claude, and spec-driven workflows"
+type: page-toc
 ---
 
 # Built with AI

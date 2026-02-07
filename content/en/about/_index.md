@@ -3,6 +3,7 @@ title: "About NubiferOS"
 linkTitle: "About"
 weight: 30
 description: "A specialized Linux distribution for cloud engineers who manage multiple accounts"
+type: page-toc
 ---
 
 # About NubiferOS
