@@ -23,8 +23,8 @@ We used three primary AI tools throughout development:
 
 | Phase | Period | Focus |
 |-------|--------|-------|
-| **Initial Prototyping** | Oct-Nov 2024 | Architecture decisions, component design |
-| **Core Development** | Dec 2024 - Jan 2025 | Build system, installer, security hardening |
+| **Initial Prototyping** | Oct-Nov 2025 | Architecture decisions, component design |
+| **Core Development** | Dec 2025 - Jan 2026 | Build system, installer, security hardening |
 | **Model Upgrade** | January 2026 | Switched from Sonnet to Opus |
 | **Polish & Documentation** | Jan-Feb 2026 | Website, documentation, testing |
 
