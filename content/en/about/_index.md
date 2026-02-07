@@ -8,7 +8,7 @@ type: page-toc
 
 NubiferOS is a specialized Linux distribution designed for cloud engineers who manage multiple cloud accounts—whether across the same provider or different ones. Built on Debian 12, it provides workspace isolation, secure credential management, and visual context indicators that prevent costly mistakes.
 
-## Why NubiferOS Exists
+## Why It Exists
 
 Cloud engineers face real risks every day:
 
@@ -24,7 +24,7 @@ Cloud engineers face real risks every day:
 
 **Nubifer** (NOO-beh-fehr /ˈnuː.bɛ.fɛr/) comes from Latin meaning "cloud-bearer"—fitting for a workstation designed to carry your cloud workloads safely.
 
-## Design Philosophy
+## Philosophy
 
 ### 1. Security First
 
@@ -49,7 +49,7 @@ All code is open source under GPL-3.0. You can audit every line that touches you
 
 Workspace isolation significantly reduces the risk of wrong-account operations. Read-only mode lets you lock workspaces to block destructive commands. Visual indicators ensure you always know which account is active.
 
-## Technical Foundation
+## Foundation
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
@@ -63,7 +63,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 
 ## Roadmap
 
-### Version 1.0 "Nimbus" (Alpha) — Q1 2026
+### v1.0 Nimbus (Alpha)
 
 **Target**: Individual cloud engineer, local workstation
 
@@ -77,7 +77,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Wayland display isolation | ✅ Complete |
 | AppArmor security profiles | ✅ Complete |
 
-### Version 1.5 "Stratus" (Beta) — Q2 2026
+### v1.5 Stratus (Beta)
 
 **Target**: Power users, multi-machine workflows
 
@@ -89,7 +89,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Community feedback integration | 🔄 Planned |
 | Hardware security key support (YubiKey) | 🔄 Planned |
 
-### Version 2.0 "Cumulus" — Q3-Q4 2026
+### v2.0 Cumulus
 
 **Target**: Small teams (5-20 engineers)
 
@@ -103,7 +103,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Container-based workspaces (Podman) | 📋 Planned |
 | Encrypted backup system | 📋 Planned |
 
-### Version 3.0 "Cirrus" — 2026+
+### v3.0 Cirrus
 
 **Target**: Enterprise deployments
 
@@ -118,7 +118,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Advanced threat detection | 📋 Future |
 | Enterprise support options | 📋 Future |
 
-### Boot Security Options (Planned)
+### Boot Security
 
 Currently, NubiferOS requires a LUKS passphrase at every boot. Future versions will offer:
 

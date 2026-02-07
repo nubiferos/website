@@ -29,7 +29,7 @@ We used three primary AI tools throughout development:
 
 **Total development time**: ~3-4 months from first commit to alpha release.
 
-## Spec-Driven Development
+## Spec-Driven Dev
 
 Kiro's spec-driven workflow was central to our development process:
 
@@ -73,7 +73,7 @@ This became acceptance criteria:
 
 Which became a design with specific components, then tasks we could execute one by one.
 
-## Challenges We Faced
+## Challenges
 
 Building a Linux distribution with AI assistance wasn't without obstacles:
 
@@ -109,7 +109,7 @@ Building a Linux distribution with AI assistance wasn't without obstacles:
 | **Credit limits** | Hit API limits during intensive development | Batch similar tasks, prioritize complex work |
 | **Shell script errors** | Subtle bash syntax issues | Explicit shellcheck validation |
 
-## What Worked Well
+## What Worked
 
 ### AI Strengths
 
@@ -131,7 +131,7 @@ Building a Linux distribution with AI assistance wasn't without obstacles:
 | **Edge cases** | Real-world scenarios AI missed |
 | **Final approval** | Every change reviewed before merge |
 
-## Lessons Learned
+## Lessons
 
 ### For AI-Assisted Development
 
@@ -166,7 +166,7 @@ Building a Linux distribution with AI assistance wasn't without obstacles:
 | **Documentation pages** | 30+ pages |
 | **Security layers** | 8 defense-in-depth layers |
 
-## Why We're Sharing This
+## Why Share This
 
 Transparency is a core value of NubiferOS. We believe in:
 
@@ -188,7 +188,7 @@ Interested in spec-driven AI development?
 | **Our Specs** | [GitHub - custom-linux-distro tasks](https://github.com/nubiferos/nubiferos/blob/trunk/.kiro/specs/custom-linux-distro/tasks.md) |
 | **NubiferOS Source** | [GitHub Repository](https://github.com/nubiferos/nubiferos) |
 
-## Explore NubiferOS
+## Explore
 
 | Resource | Link |
 |----------|------|

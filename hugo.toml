@@ -17,6 +17,9 @@ defaultContentLanguageInSubdir = false
 
 # Syntax highlighting
 [markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 2
   [markup.highlight]
     style = "monokai"
     lineNos = false

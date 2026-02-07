@@ -8,7 +8,7 @@ type: page-toc
 
 NubiferOS is built for cloud engineers who manage multiple accounts and need security they can trust. Here's what sets it apart.
 
-## Security by Default
+## Security
 
 These components are always installed and cannot be disabled. They form the security foundation.
 
@@ -22,7 +22,7 @@ These components are always installed and cannot be disabled. They form the secu
 
 → [Learn more about security architecture](/security/)
 
-## No Plaintext Credentials
+## Encrypted Credentials
 
 Traditional setups store credentials in plaintext files. NubiferOS doesn't.
 
@@ -43,7 +43,7 @@ When you run `aws s3 ls`, our CLI wrapper:
 
 → [How credential security works](/docs/security/credential-security/)
 
-## Workspace Isolation
+## Workspaces
 
 Each workspace runs in isolated Linux namespaces via Firejail:
 
@@ -76,7 +76,7 @@ sudo nubifer-workspace rw -d 15
 
 → [Workspace management guide](/docs/user-guide/workspaces/)
 
-## Security Dashboard
+## Dashboard
 
 Monitor your security posture in real-time:
 
@@ -96,7 +96,7 @@ nubifer-dashboard
 sudo verify-security
 ```
 
-## 50+ Cloud Tools
+## Cloud Tools (50+)
 
 Choose what you need during installation. Don't need Azure tools? Don't install them.
 
@@ -131,7 +131,7 @@ We use proven, audited tools—not custom implementations:
 | **External services** | No cloud dependencies for security |
 | **Audit** | All code is open source (GPL-3.0) |
 
-## Ready to Try It?
+## Get Started
 
 <a href="/download/" class="btn btn-warning btn-lg"><i class="fas fa-download me-2"></i>Download NubiferOS</a>
 <a href="/docs/getting-started/quick-start/" class="btn btn-outline-primary btn-lg ms-2">Quick Start Guide</a>

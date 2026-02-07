@@ -31,7 +31,7 @@ You describe it    -->    Seed interprets    -->    AI generates    -->    You r
 
 ---
 
-## The Desktop App
+## Desktop App
 
 NubiferAI includes a native GTK4 desktop application with a prompt-driven workflow and one-click quick actions.
 
@@ -43,7 +43,7 @@ Pre-built actions organized by category: AWS, Google Cloud, Azure, FinOps, DevOp
 
 ---
 
-## 35+ AI Seeds
+## Seeds (35+)
 
 Seeds are AI personas — specialized system prompts that give NubiferAI deep expertise in specific cloud domains. Each seed shapes how the AI thinks, what tools it uses, and what output format it produces.
 
@@ -70,7 +70,7 @@ You can also [create custom seeds](/docs/nubiferai/seeds/#creating-custom-seeds)
 
 ---
 
-## Multiple AI Providers
+## AI Providers
 
 Switch providers at any time — use free local models for testing, or premium APIs for production quality.
 
@@ -89,7 +89,7 @@ Switch providers at any time — use free local models for testing, or premium A
 
 ---
 
-## NubiferOS Integration
+## Integration
 
 When running on NubiferOS, NubiferAI automatically inherits your workspace context — no extra configuration needed.
 

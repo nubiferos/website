@@ -8,7 +8,7 @@ type: page-toc
 
 NubiferOS is built with security as the foundation, not an afterthought. We publish our [threat model](/docs/security/threat-model/) so you can verify our claims and make informed decisions.
 
-## Why Security Matters
+## Why It Matters
 
 Cloud credentials are the keys to your infrastructure. A leaked AWS access key can result in:
 - Unauthorized resource creation (cryptomining)
@@ -18,7 +18,7 @@ Cloud credentials are the keys to your infrastructure. A leaked AWS access key c
 
 **NubiferOS protects against these threats with multiple security layers.**
 
-## Required Security Components
+## Components
 
 These are always installed and cannot be disabled:
 
@@ -79,7 +79,7 @@ NubiferOS implements defense-in-depth with 8 security layers:
 | **7. App Sandboxing** | Firejail | Cross-workspace leakage |
 | **8. User Education** | Documentation | Social engineering |
 
-## Three-Layer Credential Encryption
+## Credential Encryption
 
 Your credentials are protected by three encryption layers:
 
@@ -114,7 +114,7 @@ When you run `aws s3 ls`, the CLI wrapper:
 
 Credentials are never exposed in environment variables or written to disk in plaintext.
 
-## Wayland Display Security
+## Wayland Security
 
 | Feature | X11 (Old) | Wayland (NubiferOS) |
 |---------|-----------|---------------------|
@@ -125,7 +125,7 @@ Credentials are never exposed in environment variables or written to disk in pla
 
 **What this means:** Malicious apps can't spy on your keyboard input or capture screenshots of your cloud console.
 
-## Firejail Workspace Isolation
+## Firejail Isolation
 
 Each workspace runs in isolated Linux namespaces:
 
@@ -171,7 +171,7 @@ We use proven tools instead of custom implementations:
 | **Wayland** | Display isolation | 2012 |
 | **LUKS** | Disk encryption | 2004 |
 
-## What We Protect Against
+## We Protect
 
 | Threat | Protection | Status |
 |--------|------------|--------|
@@ -182,7 +182,7 @@ We use proven tools instead of custom implementations:
 | Supply chain attacks | SBOM + GPG signing | ✅ Protected |
 | Physical device theft | LUKS full disk encryption | ✅ Protected |
 
-## What We Partially Mitigate
+## Partial Mitigations
 
 | Threat | Our Mitigation | Limitation |
 |--------|---------------|------------|
@@ -191,7 +191,7 @@ We use proven tools instead of custom implementations:
 | Application-level exploits | AppArmor, Firejail sandboxing, Wayland isolation | Can't patch third-party vulnerabilities |
 | Network-based attacks | UFW firewall, fail2ban, DNS hardening | Can't control upstream network infrastructure |
 
-## What We Don't Protect Against
+## Out of Scope
 
 | Threat | Reason | Mitigation |
 |--------|--------|------------|

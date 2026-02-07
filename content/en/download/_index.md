@@ -40,7 +40,7 @@ This is alpha software intended for testing and feedback. Expect bugs and rough 
 
 ---
 
-## Virtual Machine Images
+## VM Images
 
 NubiferOS works in VMware Workstation and VirtualBox. UEFI mode must be enabled.
 
@@ -53,7 +53,7 @@ Use the same ISO above for VM installations.
 
 ---
 
-## Verify Your Download
+## Verification
 
 Always verify your download before installation.
 
@@ -93,7 +93,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 ---
 
-## Previous Releases
+## Past Releases
 
 | Version | Release Date | Status | Notes |
 |---------|--------------|--------|-------|

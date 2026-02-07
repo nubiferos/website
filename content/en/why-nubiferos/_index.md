@@ -8,11 +8,11 @@ type: page-toc
 
 NubiferOS is purpose-built for cloud engineers who manage multiple accounts. Here's how it compares to the alternatives.
 
-## A Note on Transparency
+## Transparency
 
 We believe in honest comparisons. The tools we use (Firejail, pass, GPG, AppArmor) are available on most Linux distributions. What NubiferOS provides is pre-configuration and integration—not proprietary technology. You can build this yourself; we've just done the work for you.
 
-## The Problem We Solve
+## The Problem
 
 Cloud engineers face unique challenges that general-purpose operating systems don't address:
 
@@ -24,7 +24,7 @@ Cloud engineers face unique challenges that general-purpose operating systems do
 | **Destructive commands** | No protection | Read-only mode blocks writes |
 | **Context awareness** | None | Color-coded prompts show active account |
 
-## Compared to Standard Ubuntu/Debian
+## vs Ubuntu/Debian
 
 | Feature | Ubuntu/Debian | NubiferOS |
 |---------|---------------|-----------|
@@ -38,7 +38,7 @@ Cloud engineers face unique challenges that general-purpose operating systems do
 
 **Bottom line:** Ubuntu and Debian are excellent general-purpose systems with strong security foundations. The tools NubiferOS uses (Firejail, pass, GPG, AppArmor) are all available on these distros—you can absolutely build this yourself. NubiferOS saves you the setup time by pre-configuring everything for cloud account management.
 
-## Compared to Kali Linux
+## vs Kali Linux
 
 | Feature | Kali Linux | NubiferOS |
 |---------|------------|-----------|
@@ -53,7 +53,7 @@ Cloud engineers face unique challenges that general-purpose operating systems do
 
 **Bottom line:** Kali is excellent for security testing and forensics—it's the industry standard for penetration testing. However, it's not designed for daily cloud account management. NubiferOS is built specifically for cloud engineers who need workspace isolation and credential management across multiple accounts.
 
-## Compared to Custom Setup
+## vs Custom Setup
 
 | Aspect | Custom Setup | NubiferOS |
 |--------|--------------|-----------|
@@ -67,7 +67,7 @@ Cloud engineers face unique challenges that general-purpose operating systems do
 
 **Bottom line:** You *can* build this yourself, but why spend days when NubiferOS gives you a tested, documented, reproducible setup?
 
-## Compared to Docker/VMs
+## vs Docker/VMs
 
 | Aspect | Docker/VMs | NubiferOS Workspaces |
 |--------|------------|----------------------|
@@ -80,7 +80,7 @@ Cloud engineers face unique challenges that general-purpose operating systems do
 
 **Bottom line:** Docker and VMs are great for isolation, but they're heavyweight for daily cloud CLI work. NubiferOS workspaces give you the isolation with minimal overhead.
 
-## The Thin Wrapper Philosophy
+## Thin Wrapper
 
 NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools:
 
@@ -99,7 +99,7 @@ NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools
 - Community support (existing ecosystems)
 - Transparent (you can audit everything)
 
-## Who Is NubiferOS For?
+## Who It's For
 
 | Role | Why NubiferOS Helps |
 |------|---------------------|
@@ -110,7 +110,7 @@ NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools
 | **Multi-cloud consultants** | Switch between client accounts safely |
 | **Platform Engineers** | Consistent tooling across teams |
 
-## Who Is NubiferOS NOT For?
+## Who It's Not For
 
 | Use Case | Better Alternative |
 |----------|-------------------|
@@ -120,7 +120,7 @@ NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools
 | **Embedded development** | Yocto, Buildroot |
 | **Server deployment** | Debian, Ubuntu Server, RHEL |
 
-## Quick Comparison Summary
+## Summary
 
 | Feature | Ubuntu | Kali | Custom | NubiferOS |
 |---------|--------|------|--------|-----------|
