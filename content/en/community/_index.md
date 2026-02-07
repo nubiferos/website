@@ -3,7 +3,7 @@ title: "Community"
 linkTitle: "Community"
 weight: 40
 description: "Get help, contribute, and connect with other cloud engineers"
-type: docs
+type: page-toc
 ---
 
 # Join the NubiferOS Community
