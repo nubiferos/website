@@ -159,6 +159,8 @@ Building a Linux distribution with AI assistance wasn't without obstacles:
 | Metric | Value |
 |--------|-------|
 | **Development time** | ~3-4 months |
+| **Total lines of code** | ~39,300 (Python + Shell across NubiferOS and NubiferAI) |
+| **Total lines of documentation** | ~57,500 (Markdown across all projects + website) |
 | **Spec documents** | 15+ requirement/design docs |
 | **Components built** | 8 custom components |
 | **Tools integrated** | 50+ cloud tools |
