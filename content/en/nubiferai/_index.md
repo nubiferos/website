@@ -6,8 +6,6 @@ description: "AI-native cloud operations - describe what you want, get infrastru
 type: page-toc
 ---
 
-# NubiferAI
-
 Describe what you want to build, deploy, or change in natural language. NubiferAI generates infrastructure-as-code, deployment scripts, and operational plans using AI providers you control.
 
 <div class="text-center my-4">

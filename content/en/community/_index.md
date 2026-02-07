@@ -6,8 +6,6 @@ description: "Get help, contribute, and connect with other cloud engineers"
 type: page-toc
 ---
 
-# Join the NubiferOS Community
-
 NubiferOS is built by cloud engineers, for cloud engineers. Join our community to get help, share ideas, and contribute to the project.
 
 ## Get Help

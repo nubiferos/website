@@ -6,8 +6,6 @@ description: "A specialized Linux distribution for cloud engineers who manage mu
 type: page-toc
 ---
 
-# About NubiferOS
-
 NubiferOS is a specialized Linux distribution designed for cloud engineers who manage multiple cloud accounts—whether across the same provider or different ones. Built on Debian 12, it provides workspace isolation, secure credential management, and visual context indicators that prevent costly mistakes.
 
 ## Why NubiferOS Exists

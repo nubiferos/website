@@ -6,8 +6,6 @@ description: "How NubiferOS compares to other options for cloud engineers"
 type: page-toc
 ---
 
-# Why NubiferOS?
-
 NubiferOS is purpose-built for cloud engineers who manage multiple accounts. Here's how it compares to the alternatives.
 
 ## A Note on Transparency

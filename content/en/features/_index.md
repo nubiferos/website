@@ -6,8 +6,6 @@ description: "What makes NubiferOS the secure choice for cloud engineers"
 type: page-toc
 ---
 
-# Features
-
 NubiferOS is built for cloud engineers who manage multiple accounts and need security they can trust. Here's what sets it apart.
 
 ## Security by Default

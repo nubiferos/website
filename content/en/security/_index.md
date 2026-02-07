@@ -6,8 +6,6 @@ description: "How NubiferOS protects your cloud credentials with defense-in-dept
 type: page-toc
 ---
 
-# Security Architecture
-
 NubiferOS is built with security as the foundation, not an afterthought. We publish our [threat model](/docs/security/threat-model/) so you can verify our claims and make informed decisions.
 
 ## Why Security Matters

@@ -6,8 +6,6 @@ description: "How we built NubiferOS using AI-assisted development with Kiro, Cl
 type: page-toc
 ---
 
-# Built with AI
-
 NubiferOS was built using AI-assisted development tools. This page documents our journey, the tools we used, and the lessons we learned building a complete Linux distribution with AI collaboration.
 
 ## The Tools

@@ -6,8 +6,6 @@ description: "Get NubiferOS Alpha and start managing your cloud accounts securel
 type: page-toc
 ---
 
-# Download NubiferOS
-
 The secure cloud engineer's workstation with workspace isolation, encrypted credentials, and 50+ cloud tools available.
 
 {{% alert title="Alpha Software" color="warning" %}}
