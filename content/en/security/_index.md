@@ -183,15 +183,24 @@ We use proven tools instead of custom implementations:
 | Supply chain attacks | SBOM + GPG signing | ✅ Protected |
 | Physical device theft | LUKS full disk encryption | ✅ Protected |
 
+## What We Partially Mitigate
+
+| Threat | Our Mitigation | Limitation |
+|--------|---------------|------------|
+| CPU side-channel attacks | Kernel mitigations enabled by default | Software can reduce but not eliminate hardware flaws |
+| Cold boot attacks | LUKS encryption, kernel memory restrictions | Keys must reside in RAM while system runs |
+| Application-level exploits | AppArmor, Firejail sandboxing, Wayland isolation | Can't patch third-party vulnerabilities |
+| Network-based attacks | UFW firewall, fail2ban, DNS hardening | Can't control upstream network infrastructure |
+
 ## What We Don't Protect Against
 
 | Threat | Reason | Mitigation |
 |--------|--------|------------|
-| Hardware-level attacks | Software can't defend against hardware | Use trusted hardware |
+| Hardware keyloggers / DMA attacks | Physical hardware attacks can't be stopped by software | Use trusted hardware |
 | Nation-state actors | Beyond scope of workstation OS | Use specialized security |
+| Firmware and UEFI attacks | Requires hardware vendor cooperation | Trust your hardware vendor |
 | Social engineering | Human factors | User education |
 | Compromised cloud providers | Provider's responsibility | Use MFA, rotate credentials |
-| Physical access with passwords | By design (no backdoors) | Protect your passwords |
 
 ## Privacy First
 

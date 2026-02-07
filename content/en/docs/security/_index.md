@@ -38,17 +38,24 @@ NubiferOS implements defense in depth with eight security layers:
 ## Quick Summary
 
 ### What We Protect Against
-✅ Credential theft from disk  
-✅ Cross-account credential access  
-✅ Accidental destructive operations  
-✅ Keylogging between applications  
-✅ Supply chain attacks  
+✅ Credential theft from disk
+✅ Cross-account credential access
+✅ Accidental destructive operations
+✅ Keylogging between applications
+✅ Supply chain attacks
+
+### What We Partially Mitigate
+⚠️ CPU side-channel attacks (kernel mitigations enabled)
+⚠️ Cold boot attacks (LUKS encryption, kernel hardening)
+⚠️ Application-level exploits (sandboxing limits blast radius)
+⚠️ Network-based attacks (firewall, fail2ban)
 
 ### What We Don't Protect Against
-⚠️ Hardware-level attacks (Spectre, cold boot)  
-⚠️ Nation-state actors  
-⚠️ Social engineering  
-⚠️ Compromised cloud providers  
+⚡ Hardware keyloggers and DMA attacks
+⚡ Nation-state actors
+⚡ Firmware and UEFI attacks
+⚡ Social engineering
+⚡ Compromised cloud providers  
 
 ## Security Tools
 

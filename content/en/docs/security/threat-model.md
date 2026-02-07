@@ -116,16 +116,46 @@ Security through obscurity doesn't work. By publishing our threat model, we:
 | **Privilege Escalation** | Compromised app gains root | AppArmor mandatory access control | Blast radius limited by profiles |
 | **Compromised ISO** | Tampered download | GPG signature + SHA256 checksums | Tampered ISO fails verification |
 
+## Partially Mitigated Threats
+
+These threats cannot be fully prevented at the OS level, but NubiferOS actively reduces their impact:
+
+### 1. CPU Side-Channel Attacks (Spectre, Meltdown, MDS)
+**Risk**: Malicious processes exploit CPU speculative execution to read sensitive memory.
+
+**Our Mitigations**: Kernel CPU mitigations enabled by default (Layer 2), ASLR, restricted `/proc` access, configurable enhanced mitigations with performance trade-offs.
+
+**Limitation**: Software mitigations reduce but cannot eliminate hardware-level vulnerabilities. New variants may appear before patches are available.
+
+### 2. Cold Boot Attacks
+**Risk**: Attacker extracts LUKS encryption keys from RAM on a running or recently powered-off machine.
+
+**Our Mitigations**: LUKS full disk encryption (data is useless without the key), kernel hardening restricts memory access, limited LUKS passphrase attempts with forced reboot on failure.
+
+**Limitation**: Encryption keys must reside in RAM while the system is running. No RAM wiping on shutdown or hardware memory encryption is currently implemented. Future TPM+PIN support will further reduce this risk.
+
+### 3. Network-Based Attacks
+**Risk**: Man-in-the-middle attacks, DNS poisoning, BGP hijacking, ISP surveillance.
+
+**Our Mitigations**: UFW firewall with deny-by-default, fail2ban brute force protection, DNS hardening, VPN compatibility.
+
+**Limitation**: NubiferOS cannot control network infrastructure between your machine and cloud providers. We harden the endpoint but cannot prevent upstream network attacks.
+
+### 4. Application-Level Vulnerabilities
+**Risk**: Vulnerabilities in cloud CLIs, browser exploits, IDE vulnerabilities.
+
+**Our Mitigations**: AppArmor profiles limit what compromised apps can access, Firejail sandboxing isolates workspaces, Wayland prevents cross-application keylogging, workspace isolation contains blast radius.
+
+**Limitation**: NubiferOS cannot patch third-party application vulnerabilities. We limit the damage a compromised application can cause, but cannot prevent the vulnerability itself.
+
 ## Explicit Out-of-Scope Threats
 
-We're transparent about what we **don't** protect against:
+These threats are outside what NubiferOS can meaningfully address:
 
-### 1. Hardware-Level Attacks
-**Examples**: CPU side-channel attacks (Spectre, Meltdown), hardware keyloggers, DMA attacks, cold boot attacks
+### 1. Hardware Keyloggers and DMA Attacks
+**Examples**: Physical keylogging devices, Thunderbolt/PCIe DMA attacks, hardware implants
 
-**Rationale**: Software alone cannot comprehensively defend against hardware attacks. Some mitigations exist with performance trade-offs.
-
-**Partial Mitigations**: Basic CPU mitigations enabled by default, configurable enhanced mitigations available.
+**Rationale**: Physical hardware attacks cannot be detected or prevented by software.
 
 ### 2. Nation-State Actors
 **Examples**: Advanced persistent threats, hardware supply chain attacks, sophisticated zero-day chains
@@ -146,20 +176,6 @@ We're transparent about what we **don't** protect against:
 **Examples**: AWS/Azure/GCP infrastructure vulnerabilities, cloud provider insider threats
 
 **Rationale**: Cloud infrastructure security is the provider's responsibility.
-
-### 6. Network Infrastructure
-**Examples**: Man-in-the-middle attacks, DNS poisoning, BGP hijacking, ISP surveillance
-
-**Rationale**: NubiferOS cannot control network infrastructure but reduces endpoint exposure.
-
-**Endpoint Protections**: HTTPS-only browser, firewall with deny-by-default, DNS hardening, VPN compatibility.
-
-### 7. Application-Level Vulnerabilities
-**Examples**: Vulnerabilities in cloud CLIs, browser exploits, IDE vulnerabilities
-
-**Rationale**: NubiferOS does not guarantee third-party application security but uses sandboxing to reduce blast radius.
-
-**Blast Radius Reduction**: AppArmor profiles, Firejail sandboxing, workspace isolation, Wayland isolation.
 
 ## Security Layers
 
@@ -231,21 +247,24 @@ Every NubiferOS release includes comprehensive supply chain security:
 ## Risk Assessment
 
 ### High Risk (Actively Mitigated)
-✅ Credential theft and exposure  
-✅ Cross-account operational mistakes  
-✅ Physical device compromise  
-✅ Application-level attacks  
-✅ Supply chain attacks  
+✅ Credential theft and exposure
+✅ Cross-account operational mistakes
+✅ Physical device compromise
+✅ Supply chain attacks
 
 ### Medium Risk (Partially Mitigated)
-⚠️ Network-based attacks (firewall protection)  
-⚠️ System-level exploits (kernel hardening)  
-⚠️ Brute force attacks (fail2ban protection)  
+⚠️ CPU side-channel attacks (kernel mitigations enabled)
+⚠️ Cold boot attacks (LUKS encryption, kernel hardening)
+⚠️ Application-level exploits (sandboxing, AppArmor, workspace isolation)
+⚠️ Network-based attacks (firewall, fail2ban, DNS hardening)
+⚠️ System-level exploits (kernel hardening, ASLR)
+⚠️ Brute force attacks (fail2ban, password policies)
 
-### Low Risk (Accepted)
-⚡ Hardware-level attacks  
-⚡ Nation-state threats  
-⚡ Social engineering  
+### Out of Scope (Accepted)
+⚡ Hardware keyloggers and DMA attacks
+⚡ Nation-state threats
+⚡ Firmware and UEFI attacks
+⚡ Social engineering
 ⚡ Cloud provider compromise  
 
 ## Trust Boundaries
