@@ -37,6 +37,6 @@ By the end of this guide, you'll be able to:
 
 Once you're set up, explore:
 
-- [NubiferAI](/docs/nubiferai/) — AI-native cloud operations for NubiferOS
+- [NubiferAI](/nubiferai/) — AI-native cloud operations for NubiferOS
 - [Security Architecture](/docs/security/) — How NubiferOS protects your credentials
 - [Features](/features/) — Full list of what's included

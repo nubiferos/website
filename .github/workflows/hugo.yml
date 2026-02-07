@@ -101,6 +101,17 @@ jobs:
           echo "NubiferAI docs synced:"
           ls -la "$DOCS_DIR/"
 
+      - name: Fetch NubiferAI screenshots
+        run: |
+          IMG_DIR="static/img/nubiferai"
+          mkdir -p "$IMG_DIR"
+          IMG_URL="https://raw.githubusercontent.com/nubiferos/nubiferai/trunk/docs/user-guide/screenshots"
+          for img in home-page.png seeds-browser.png seed-cards-detail.png provider-dropdown.png; do
+            curl -sf "$IMG_URL/$img" -o "$IMG_DIR/$img" && echo "Fetched: $img" || echo "Missing: $img"
+          done
+          echo "NubiferAI screenshots synced:"
+          ls -la "$IMG_DIR/"
+
       - name: Init Hugo Modules
         run: hugo mod tidy
 

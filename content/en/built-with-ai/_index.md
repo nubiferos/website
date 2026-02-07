@@ -197,6 +197,6 @@ Interested in spec-driven AI development?
 | **Features** | [What's included](/features/) |
 | **Why NubiferOS?** | [How we compare to alternatives](/why-nubiferos/) |
 | **Security** | [Security architecture](/security/) |
-| **NubiferAI** | [AI-native cloud operations](/docs/nubiferai/) |
+| **NubiferAI** | [AI-native cloud operations](/nubiferai/) |
 | **About** | [Project philosophy and roadmap](/about/) |
 | **Community** | [Join the community](/community/) |

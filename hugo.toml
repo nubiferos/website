@@ -76,6 +76,10 @@ defaultContentLanguageInSubdir = false
     weight = 10
     url = "/download/"
   [[menu.main]]
+    name = "NubiferAI"
+    weight = 15
+    url = "/nubiferai/"
+  [[menu.main]]
     name = "Documentation"
     weight = 20
     url = "/docs/"

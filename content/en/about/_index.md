@@ -151,7 +151,7 @@ NubiferOS is fully open source under the GPL-3.0 license.
 | **Features** | [What's included](/features/) |
 | **Why NubiferOS?** | [How we compare](/why-nubiferos/) |
 | **Security** | [Security architecture](/security/) |
-| **NubiferAI** | [AI-native cloud operations](/docs/nubiferai/) |
+| **NubiferAI** | [AI-native cloud operations](/nubiferai/) |
 | **Built with AI** | [Our development story](/built-with-ai/) |
 | **Community** | [Join Discord](https://discord.gg/nubiferos) |
 | **Source Code** | [GitHub Repository](https://github.com/nubiferos/nubiferos) |

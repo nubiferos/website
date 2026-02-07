@@ -34,7 +34,7 @@ Understand how NubiferOS protects your credentials:
 
 AI-native cloud operations — describe what you want, get infrastructure-as-code:
 
-- [Overview](/docs/nubiferai/) - What NubiferAI is and how it works
+- [Overview](/nubiferai/) - What NubiferAI is and how it works
 - [Getting Started](/docs/nubiferai/getting-started/) - Installation and first nucleation
 - [AI Providers](/docs/nubiferai/providers/) - Claude, OpenAI, Ollama, and Bedrock setup
 - [GUI Application](/docs/nubiferai/gui/) - GTK desktop app walkthrough
