@@ -98,7 +98,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 | Version | Release Date | Status | Notes |
 |---------|--------------|--------|-------|
-| 1.0 "Nimbus" (Alpha) | Q1 2025 | Current | First public release |
+| 1.0 "Nimbus" (Alpha) | Q1 2026 | Current | First public release |
 
 ---
 
@@ -106,8 +106,8 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 | Version | Target | Highlights |
 |---------|--------|------------|
-| **1.5 "Stratus" (Beta)** | Q2 2025 | Single-password boot, YubiKey support |
-| **2.0 "Cumulus"** | Q3-Q4 2025 | TPM support, team features |
+| **1.5 "Stratus" (Beta)** | Q2 2026 | Single-password boot, YubiKey support |
+| **2.0 "Cumulus"** | Q3-Q4 2026 | TPM support, team features |
 
 [View Full Roadmap →](/about/#roadmap)
 

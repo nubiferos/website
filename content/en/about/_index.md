@@ -64,7 +64,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 
 ## Roadmap
 
-### Version 1.0 "Nimbus" (Alpha) — Q1 2025
+### Version 1.0 "Nimbus" (Alpha) — Q1 2026
 
 **Target**: Individual cloud engineer, local workstation
 
@@ -78,7 +78,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Wayland display isolation | ✅ Complete |
 | AppArmor security profiles | ✅ Complete |
 
-### Version 1.5 "Stratus" (Beta) — Q2 2025
+### Version 1.5 "Stratus" (Beta) — Q2 2026
 
 **Target**: Power users, multi-machine workflows
 
@@ -90,7 +90,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 | Community feedback integration | 🔄 Planned |
 | Hardware security key support (YubiKey) | 🔄 Planned |
 
-### Version 2.0 "Cumulus" — Q3-Q4 2025
+### Version 2.0 "Cumulus" — Q3-Q4 2026
 
 **Target**: Small teams (5-20 engineers)
 
