@@ -70,3 +70,11 @@ sudo nubifer-workspace rw -d 30
 ```
 
 **Learn more**: [Workspace Isolation - Read-Only Mode](/docs/security/workspace-isolation/#read-only-mode)
+
+## NubiferAI Integration
+
+NubiferAI is an AI-native cloud operations platform that integrates with NubiferOS workspaces. Describe what you want to build or deploy in natural language and get infrastructure-as-code.
+
+- [NubiferAI Overview](/docs/nubiferai/) — What it is and how it works
+- [Getting Started with NubiferAI](/docs/nubiferai/getting-started/) — Installation and first nucleation
+- [NubiferOS Integration](/docs/nubiferai/nubiferos-integration/) — How NubiferAI uses your workspaces and credentials

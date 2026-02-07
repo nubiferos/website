@@ -134,5 +134,14 @@ We use proven, audited tools—not custom implementations:
 
 ## Ready to Try It?
 
-<a href="/website/download/" class="btn btn-warning btn-lg"><i class="fas fa-download me-2"></i>Download NubiferOS</a>
-<a href="/website/docs/getting-started/quick-start/" class="btn btn-outline-primary btn-lg ms-2">Quick Start Guide</a>
+<a href="/download/" class="btn btn-warning btn-lg"><i class="fas fa-download me-2"></i>Download NubiferOS</a>
+<a href="/docs/getting-started/quick-start/" class="btn btn-outline-primary btn-lg ms-2">Quick Start Guide</a>
+
+## Learn More
+
+| Topic | Link |
+|-------|------|
+| **Why NubiferOS?** | [How we compare to alternatives](/why-nubiferos/) |
+| **Security Architecture** | [Defense-in-depth details](/security/) |
+| **Built with AI** | [Our AI-assisted development story](/built-with-ai/) |
+| **About** | [Project philosophy and roadmap](/about/) |

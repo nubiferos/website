@@ -32,3 +32,11 @@ By the end of this guide, you'll be able to:
 - Securely store and manage cloud credentials
 - Switch between workspaces with visual context indicators
 - Use read-only mode to prevent accidental changes
+
+## Next Steps
+
+Once you're set up, explore:
+
+- [NubiferAI](/docs/nubiferai/) — AI-native cloud operations for NubiferOS
+- [Security Architecture](/docs/security/) — How NubiferOS protects your credentials
+- [Features](/features/) — Full list of what's included

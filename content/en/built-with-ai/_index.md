@@ -187,10 +187,14 @@ Interested in spec-driven AI development?
 | **Our Specs** | [GitHub - custom-linux-distro tasks](https://github.com/nubiferos/nubiferos/blob/trunk/.kiro/specs/custom-linux-distro/tasks.md) |
 | **NubiferOS Source** | [GitHub Repository](https://github.com/nubiferos/nubiferos) |
 
-## Questions?
+## Explore NubiferOS
 
-| Channel | Link |
-|---------|------|
-| **Discord** | [Join our community](https://discord.gg/nubiferos) |
-| **GitHub Discussions** | [Ask questions](https://github.com/nubiferos/nubiferos/discussions) |
-| **Issues** | [Report problems](https://github.com/nubiferos/nubiferos/issues) |
+| Resource | Link |
+|----------|------|
+| **Download** | [Get NubiferOS](/download/) |
+| **Features** | [What's included](/features/) |
+| **Why NubiferOS?** | [How we compare to alternatives](/why-nubiferos/) |
+| **Security** | [Security architecture](/security/) |
+| **NubiferAI** | [AI-native cloud operations](/docs/nubiferai/) |
+| **About** | [Project philosophy and roadmap](/about/) |
+| **Community** | [Join the community](/community/) |

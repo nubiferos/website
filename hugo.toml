@@ -81,6 +81,10 @@ defaultContentLanguageInSubdir = false
     weight = 30
     url = "/about/"
   [[menu.main]]
+    name = "Built with AI"
+    weight = 35
+    url = "/built-with-ai/"
+  [[menu.main]]
     name = "Community"
     weight = 40
     url = "/community/"

@@ -143,6 +143,15 @@ See the [Features page](/features/) for a complete list of pre-installed tools.
 
 **Source**: [INCLUDED_TOOLS.md](https://github.com/nubiferos/nubiferos/blob/trunk/docs/guides/INCLUDED_TOOLS.md)
 
+## NubiferAI
+
+NubiferAI adds AI-native cloud operations to NubiferOS:
+
+- [NubiferAI Overview](/docs/nubiferai/) — What it is and how it works
+- [AI Providers](/docs/nubiferai/providers/) — Claude, OpenAI, Ollama, and Bedrock setup
+- [Seeds](/docs/nubiferai/seeds/) — AI personas for cloud tasks
+- [GUI Application](/docs/nubiferai/gui/) — GTK desktop app walkthrough
+
 ## Source Code
 
 - [NubiferOS Repository](https://github.com/nubiferos/nubiferos)

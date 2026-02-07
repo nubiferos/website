@@ -144,4 +144,8 @@ Ready to try NubiferOS?
 |------|------|
 | **Download** | [Get NubiferOS Alpha](/download/) |
 | **Quick Start** | [Create your first workspace](/docs/getting-started/quick-start/) |
-| **Learn More** | [Read the documentation](/docs/) |
+| **Features** | [Full feature list](/features/) |
+| **Security** | [Security architecture](/security/) |
+| **Built with AI** | [How we built NubiferOS](/built-with-ai/) |
+| **Documentation** | [Read the docs](/docs/) |
+| **Community** | [Join the community](/community/) |

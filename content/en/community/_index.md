@@ -132,7 +132,12 @@ We're committed to providing a welcoming and inclusive community for everyone.
 | Resource | Link |
 |----------|------|
 | **Download** | [Get NubiferOS](/download/) |
+| **Features** | [What's included](/features/) |
+| **Why NubiferOS?** | [How we compare](/why-nubiferos/) |
 | **Documentation** | [Read the Docs](/docs/) |
+| **Security** | [Security architecture](/security/) |
+| **Built with AI** | [Our development story](/built-with-ai/) |
+| **About** | [Project philosophy and roadmap](/about/) |
 | **Source Code** | [GitHub](https://github.com/nubiferos/nubiferos) |
 | **Discord** | [Join Server](https://discord.gg/nubiferos) |
 | **Twitter** | [@nubiferos](https://twitter.com/nubiferos) |
