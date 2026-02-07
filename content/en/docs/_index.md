@@ -30,6 +30,17 @@ Understand how NubiferOS protects your credentials:
 - [Credential Security](/docs/security/credential-security/) - GPG + pass encryption
 - [Workspace Isolation](/docs/security/workspace-isolation/) - Firejail namespaces and read-only mode
 
+## NubiferAI
+
+AI-native cloud operations — describe what you want, get infrastructure-as-code:
+
+- [Overview](/docs/nubiferai/) - What NubiferAI is and how it works
+- [Getting Started](/docs/nubiferai/getting-started/) - Installation and first nucleation
+- [AI Providers](/docs/nubiferai/providers/) - Claude, OpenAI, Ollama, and Bedrock setup
+- [GUI Application](/docs/nubiferai/gui/) - GTK desktop app walkthrough
+- [Seeds](/docs/nubiferai/seeds/) - AI personas for cloud tasks
+- [NubiferOS Integration](/docs/nubiferai/nubiferos-integration/) - Workspace and credential integration
+
 ## Reference
 
 Technical reference documentation:

@@ -59,6 +59,48 @@ jobs:
           echo "Fetched releases:"
           cat data/releases.json | jq '.[].tag_name' || echo "No releases yet"
 
+      - name: Fetch NubiferAI docs from nubiferos/nubiferai
+        run: |
+          DOCS_DIR="content/en/docs/nubiferai"
+          mkdir -p "$DOCS_DIR"
+          BASE_URL="https://raw.githubusercontent.com/nubiferos/nubiferai/trunk/docs/user-guide"
+
+          add_frontmatter() {
+            local file="$1" title="$2" link="$3" weight="$4" desc="$5" content="$6"
+            printf -- '---\ntitle: "%s"\nlinkTitle: "%s"\nweight: %s\ndescription: "%s"\n---\n' \
+              "$title" "$link" "$weight" "$desc" > "$DOCS_DIR/$file"
+            cat "$content" >> "$DOCS_DIR/$file"
+          }
+
+          # Section index
+          curl -sf "$BASE_URL/index.md" -o /tmp/nai-index.md
+          add_frontmatter "_index.md" "NubiferAI" "NubiferAI" 25 \
+            "AI-native cloud operations platform for NubiferOS" /tmp/nai-index.md
+
+          # Individual pages
+          curl -sf "$BASE_URL/getting-started.md" -o /tmp/nai-getting-started.md && \
+            add_frontmatter "getting-started.md" "Getting Started with NubiferAI" "Getting Started" 10 \
+              "Installation, first launch, and your first nucleation" /tmp/nai-getting-started.md
+
+          curl -sf "$BASE_URL/providers.md" -o /tmp/nai-providers.md && \
+            add_frontmatter "providers.md" "AI Providers" "Providers" 20 \
+              "Setting up Claude, OpenAI, Ollama, and AWS Bedrock" /tmp/nai-providers.md
+
+          curl -sf "$BASE_URL/gui.md" -o /tmp/nai-gui.md && \
+            add_frontmatter "gui.md" "GUI Application" "GUI Application" 30 \
+              "Walkthrough of the NubiferAI GTK desktop application" /tmp/nai-gui.md
+
+          curl -sf "$BASE_URL/seeds.md" -o /tmp/nai-seeds.md && \
+            add_frontmatter "seeds.md" "Seeds" "Seeds" 40 \
+              "AI personas for different cloud tasks" /tmp/nai-seeds.md
+
+          curl -sf "$BASE_URL/nubiferos-integration.md" -o /tmp/nai-nubiferos-integration.md && \
+            add_frontmatter "nubiferos-integration.md" "NubiferOS Integration" "NubiferOS Integration" 50 \
+              "Using NubiferAI within NubiferOS workspaces" /tmp/nai-nubiferos-integration.md
+
+          echo "NubiferAI docs synced:"
+          ls -la "$DOCS_DIR/"
+
       - name: Init Hugo Modules
         run: hugo mod tidy
 
