@@ -1,8 +1,12 @@
 {{/* Renders releases from data/releases.json (refreshed every 30 min by CI) */}}
+{{/* Only shows releases that have at least one asset (skips orphaned/empty releases) */}}
 {{ $releases := site.Data.releases }}
+{{ $shown := 0 }}
 {{ if $releases }}
-  {{ range $index, $release := first 3 $releases }}
-  {{ $isLatest := eq $index 0 }}
+  {{ range $releases }}
+    {{ if and .assets (gt (len .assets) 0) (lt $shown 3) }}
+    {{ $isLatest := eq $shown 0 }}
+    {{ $shown = add $shown 1 }}
   <div class="release-card mb-4 rounded-3 overflow-hidden" style="border: 1px solid var(--card-border); {{ if $isLatest }}border: 2px solid #F59E0B;{{ end }}">
 
     {{/* Header with download button */}}
@@ -15,16 +19,17 @@
           </h3>
           <div class="{{ if $isLatest }}text-light{{ else }}text-muted{{ end }}">
             <small>
-              <i class="fas fa-calendar me-1"></i>{{ .published_at | time.Format "January 2, 2006" }}
+              <i class="fas fa-calendar me-1"></i>{{ .published_at | time.Format "January 2, 2006 at 15:04 UTC" }}
               {{ if .prerelease }}<span class="badge bg-warning text-dark ms-2">Alpha</span>{{ end }}
+              <a href="https://github.com/nubiferos/nubiferos/releases/tag/{{ .tag_name }}" class="ms-2 {{ if $isLatest }}text-light{{ else }}text-muted{{ end }}" title="View on GitHub">
+                <i class="fas fa-external-link-alt"></i> {{ .tag_name }}
+              </a>
             </small>
           </div>
         </div>
         <div class="d-flex gap-2 flex-wrap">
-          {{ $hasISO := false }}
           {{ range .assets }}
             {{ if hasSuffix .name ".iso" }}
-            {{ $hasISO = true }}
             <a href="{{ .browser_download_url }}" class="btn {{ if $isLatest }}btn-warning{{ else }}btn-outline-primary{{ end }}">
               <i class="fas fa-download me-2"></i>Download ISO
             </a>
@@ -36,11 +41,6 @@
               <i class="fas fa-fingerprint me-1"></i>Checksum
             </a>
             {{ end }}
-          {{ end }}
-          {{ if not $hasISO }}
-          <span class="badge bg-secondary py-2 px-3">
-            <i class="fas fa-clock me-1"></i>ISO uploading soon...
-          </span>
           {{ end }}
         </div>
       </div>
@@ -59,20 +59,24 @@
     <div class="px-4 py-3" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
       <small>
         <strong>All Downloads:</strong>
-        {{ if not .assets }}
-          <span class="text-muted ms-3">No assets uploaded yet</span>
-        {{ end }}
         {{ range .assets }}
           <a href="{{ .browser_download_url }}" class="ms-3 text-decoration-none">
             {{ if hasSuffix .name ".iso" }}<i class="fas fa-compact-disc me-1"></i>
             {{ else if hasSuffix .name "SHA256SUMS" }}<i class="fas fa-fingerprint me-1"></i>
             {{ else if hasSuffix .name ".asc" }}<i class="fas fa-key me-1"></i>
+            {{ else if hasSuffix .name ".pub" }}<i class="fas fa-key me-1"></i>
             {{ else }}<i class="fas fa-file me-1"></i>{{ end }}
             {{ .name }}
           </a>
         {{ end }}
       </small>
     </div>
+  </div>
+    {{ end }}
+  {{ end }}
+  {{ if eq $shown 0 }}
+  <div class="alert alert-info">
+    <i class="fas fa-info-circle me-2"></i>No releases with downloadable assets yet. Check back soon!
   </div>
   {{ end }}
 {{ else }}
