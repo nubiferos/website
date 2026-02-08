@@ -89,7 +89,7 @@ NubiferOS doesn't reinvent the wheel. We build thin wrappers around proven tools
 | **Credentials** | pass + GPG | 25+ years of security audits |
 | **Isolation** | Firejail | Proven Linux namespaces |
 | **Display security** | Wayland | Modern, audited protocol |
-| **Encryption** | LUKS2 | Industry standard, hardware-accelerated |
+| **Encryption** | LUKS1 | Industry standard, hardware-accelerated |
 | **Access control** | AppArmor | Kernel-level, battle-tested |
 
 **Benefits of this approach:**

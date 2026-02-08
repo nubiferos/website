@@ -35,7 +35,7 @@ These are always installed and cannot be disabled:
 
 ## Security Dashboard
 
-Monitor your security posture in real-time:
+Monitor your security posture:
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -59,10 +59,9 @@ Monitor your security posture in real-time:
 |-------|------------------|
 | **CPU Mitigations** | Spectre, Meltdown, RETBleed protection status |
 | **Disk Encryption** | LUKS enabled and properly configured |
-| **Network Security** | Firewall active, no unexpected open ports |
+| **Network Security** | Firewall active, default-deny policy |
 | **System Hardening** | AppArmor profiles loaded, kernel hardened |
-| **Credential Status** | Vault locked/unlocked, rotation reminders |
-| **Workspace Mode** | Read-only vs read-write status |
+| **Credential Status** | Vault locked/unlocked, credential count |
 
 ## Security Layers
 

@@ -55,7 +55,7 @@ Workspace isolation significantly reduces the risk of wrong-account operations. 
 |-----------|------------|---------|
 | **Base System** | Debian 12 (Bookworm) | Stable, well-supported foundation |
 | **Desktop** | GNOME with Wayland | Modern display isolation |
-| **Disk Encryption** | LUKS2 (mandatory) | Protect data at rest |
+| **Disk Encryption** | LUKS1 (mandatory) | Protect data at rest |
 | **Credentials** | pass + GPG + GNOME Keyring | Three-layer encryption |
 | **Isolation** | Firejail namespaces | Workspace separation |
 | **Access Control** | AppArmor profiles | Limit application permissions |

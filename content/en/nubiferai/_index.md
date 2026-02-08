@@ -33,7 +33,7 @@ You describe it    -->    Seed interprets    -->    AI generates    -->    You r
 
 ## Desktop App
 
-NubiferAI includes a native GTK4 desktop application with a prompt-driven workflow and one-click quick actions.
+NubiferAI includes a native GTK 3 desktop application with a prompt-driven workflow and one-click quick actions.
 
 {{< screenshot src="img/nubiferai/home-page.png" alt="NubiferAI home page with prompt and quick actions" caption="Home page — describe what you want or pick a quick action" >}}
 

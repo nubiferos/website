@@ -78,15 +78,14 @@ sudo nubifer-workspace rw -d 15
 
 ## Security Dashboard
 
-Monitor your security posture in real-time:
+Monitor your security posture:
 
 | Check | What It Verifies |
 |-------|------------------|
 | **CPU Mitigations** | Spectre, Meltdown, RETBleed protection |
 | **Disk Encryption** | LUKS enabled and configured |
-| **Network Security** | Firewall active, no unexpected open ports |
-| **Credential Status** | Vault status, rotation reminders |
-| **Workspace Mode** | Read-only vs read-write |
+| **Network Security** | Firewall active, default-deny policy |
+| **Credential Status** | Vault status, credential count |
 
 ```bash
 # Launch dashboard
