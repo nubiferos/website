@@ -1,4 +1,4 @@
-baseURL = "https://nubiferos.github.io/website/"
+baseURL = "https://nubiferos.org/"
 title = "NubiferOS"
 languageCode = "en-us"
 enableGitInfo = false
