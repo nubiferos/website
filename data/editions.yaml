@@ -9,18 +9,19 @@
     - "LUKS full disk encryption"
     - "Read-only mode"
     - "Security dashboard"
+    - "NubiferAI available via optional package"
 
-- id: ai
-  name: "NubiferOS + AI"
-  icon: "fas fa-robot"
-  pattern: "-ai-"
-  description: "Everything in Base plus AI-native cloud operations"
+- id: container
+  name: "NubiferOS Container"
+  icon: "fas fa-box"
+  type: "container"
+  description: "Cloud tools in a Docker container — no install required"
   features:
-    - "Everything in Base"
-    - "NubiferAI GTK app"
-    - "35 AI seeds"
-    - "Ollama pre-installed"
-    - "Multi-provider support"
+    - "All NubiferOS cloud tools"
+    - "Docker / Podman compatible"
+    - "Lightweight and portable"
+    - "CI/CD pipeline ready"
+    - "No desktop environment"
 
 - id: tpm
   name: "NubiferOS + TPM"

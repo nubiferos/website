@@ -28,6 +28,7 @@ This is alpha software intended for testing and feedback. Expect bugs and rough 
 | **Credentials** | pass + GPG + GNOME Keyring |
 | **Isolation** | Firejail workspace namespaces |
 | **Cloud Tools** | 50+ tools available (AWS, Azure, GCP, Terraform, kubectl, etc.) |
+| **NubiferAI** | Optional package — install via `sudo apt install nubifer-ai` |
 
 ### System Requirements
 
@@ -37,6 +38,19 @@ This is alpha software intended for testing and feedback. Expect bugs and rough 
 | **RAM** | 4 GB | 8 GB+ |
 | **Disk Space** | 25 GB | 50 GB+ |
 | **Firmware** | UEFI | UEFI |
+
+---
+
+## Container
+
+Run NubiferOS cloud tools without a full installation:
+
+```bash
+docker pull ghcr.io/nubiferos/nubiferos:latest
+docker run -it ghcr.io/nubiferos/nubiferos
+```
+
+The container includes all NubiferOS cloud tools and works with Docker or Podman. Ideal for CI/CD pipelines or quick access to the toolset.
 
 ---
 
@@ -66,17 +80,17 @@ sha256sum -c SHA256SUMS
 
 Expected output:
 ```
-nubiferos-1.0-alpha-amd64.iso: OK
+NubiferOS-0.1.0-20260310-a65efef-amd64.iso: OK
 ```
 
 ### Verify GPG Signature (Optional)
 
 ```bash
 # Import the NubiferOS signing key
-gpg --keyserver keyserver.ubuntu.com --recv-keys <KEY_ID>
+gpg --import nubiferos-signing-key.pub
 
 # Verify signature
-gpg --verify SHA256SUMS.gpg SHA256SUMS
+gpg --verify *.iso.asc *.iso
 ```
 
 ---
@@ -97,7 +111,7 @@ gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 | Version | Release Date | Status | Notes |
 |---------|--------------|--------|-------|
-| 1.0 "Nimbus" (Alpha) | Q1 2026 | Current | First public release |
+| 0.1.1 | March 2026 | Current | CI/CD pipeline, container image, OTA updates |
 
 ---
 

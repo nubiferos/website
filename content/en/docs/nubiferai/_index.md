@@ -22,17 +22,18 @@ NubiferAI is an AI-native cloud operations platform. Describe what you want to b
 ## Quick Start
 
 ```bash
-# Install (standalone)
-pip install nubiferai
+# Install on NubiferOS
+sudo apt install nubifer-ai
 
-# Or via NubiferOS
-nubi addon install nubiferai
+# Install standalone
+python -m venv .venv && source .venv/bin/activate
+make install
 
 # Launch the GUI
 nubiferai-gtk
 
 # Or use the CLI
-nubiferai nucleate "Deploy a Python Flask app to AWS ECS with a load balancer"
+nubiferai front "Deploy a Python Flask app to AWS ECS with a load balancer"
 ```
 
 ## Source Code

@@ -33,7 +33,7 @@ You describe it    -->    Seed interprets    -->    AI generates    -->    You r
 
 ## Desktop App
 
-NubiferAI includes a native GTK 3 desktop application with a prompt-driven workflow and one-click quick actions.
+NubiferAI includes a native GTK 4 / libadwaita desktop application with a prompt-driven workflow and one-click quick actions.
 
 {{< screenshot src="img/nubiferai/home-page.png" alt="NubiferAI home page with prompt and quick actions" caption="Home page — describe what you want or pick a quick action" >}}
 
@@ -107,13 +107,17 @@ When running on NubiferOS, NubiferAI automatically inherits your workspace conte
 
 ```bash
 # On NubiferOS (recommended)
-nubi addon install nubiferai
+sudo apt install nubifer-ai
 
 # Standalone
-pip install nubiferai
+python -m venv .venv && source .venv/bin/activate
+make install
 
-# Launch
+# Launch the GUI
 nubiferai-gtk
+
+# Or use the CLI
+nubiferai front "Deploy a Flask app to AWS ECS with ALB"
 ```
 
 ---
