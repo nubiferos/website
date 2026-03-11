@@ -6,22 +6,25 @@
 {{/* Find the latest release with assets */}}
 {{ $latest := false }}
 {{ range $releases }}
-  {{ if and .assets (gt (len .assets) 0) (not $latest) }}
+  {{ $assets := index . "assets" }}
+  {{ if and $assets (gt (len $assets) 0) (not $latest) }}
     {{ $latest = . }}
   {{ end }}
 {{ end }}
 
 {{ if $latest }}
 {{ $scratch := newScratch }}
+{{ $latestAssets := index $latest "assets" }}
 
 {{/* First pass: assign ISOs to patterned editions, track claims */}}
 {{ range $editions }}
   {{ $edition := . }}
   {{ if .pattern }}
-    {{ range $latest.assets }}
-      {{ if and (hasSuffix .name ".iso") (findRE $edition.pattern .name) }}
+    {{ range $latestAssets }}
+      {{ $name := index . "name" }}
+      {{ if and (hasSuffix $name ".iso") (findRE $edition.pattern $name) }}
         {{ $scratch.Set (printf "iso-%s" $edition.id) . }}
-        {{ $scratch.Set (printf "claimed-%s" .name) true }}
+        {{ $scratch.Set (printf "claimed-%s" $name) true }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -31,8 +34,9 @@
 {{ range $editions }}
   {{ if and (not .pattern) (not .type) }}
     {{ $edition := . }}
-    {{ range $latest.assets }}
-      {{ if and (hasSuffix .name ".iso") (not ($scratch.Get (printf "claimed-%s" .name))) (not ($scratch.Get (printf "iso-%s" $edition.id))) }}
+    {{ range $latestAssets }}
+      {{ $name := index . "name" }}
+      {{ if and (hasSuffix $name ".iso") (not ($scratch.Get (printf "claimed-%s" $name))) (not ($scratch.Get (printf "iso-%s" $edition.id))) }}
         {{ $scratch.Set (printf "iso-%s" $edition.id) . }}
       {{ end }}
     {{ end }}
@@ -41,22 +45,27 @@
 
 {{/* Find checksum asset */}}
 {{ $checksum := false }}
-{{ range $latest.assets }}
-  {{ if hasSuffix .name "SHA256SUMS" }}
+{{ range $latestAssets }}
+  {{ $name := index . "name" }}
+  {{ if hasSuffix $name "SHA256SUMS" }}
     {{ $checksum = . }}
   {{ end }}
 {{ end }}
 
 {{/* Release version header */}}
+{{ $relName := index $latest "name" }}
+{{ $tagName := index $latest "tag_name" }}
+{{ $prerelease := index $latest "prerelease" }}
+{{ $publishedAt := index $latest "published_at" }}
 <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
   <div>
-    <span class="h5 mb-0">{{ $latest.name | default $latest.tag_name }}</span>
-    {{ if $latest.prerelease }}<span class="badge bg-warning text-dark ms-2">Alpha</span>{{ end }}
+    <span class="h5 mb-0">{{ $relName | default $tagName }}</span>
+    {{ if $prerelease }}<span class="badge bg-warning text-dark ms-2">Alpha</span>{{ end }}
   </div>
   <small class="text-muted">
-    <i class="fas fa-calendar me-1"></i>{{ $latest.published_at | time.Format "January 2, 2006" }}
-    <a href="https://github.com/nubiferos/nubiferos/releases/tag/{{ $latest.tag_name }}" class="ms-2">
-      <i class="fas fa-external-link-alt"></i> {{ $latest.tag_name }}
+    <i class="fas fa-calendar me-1"></i>{{ $publishedAt | time.Format "January 2, 2006" }}
+    <a href="https://github.com/nubiferos/nubiferos/releases/tag/{{ $tagName }}" class="ms-2">
+      <i class="fas fa-external-link-alt"></i> {{ $tagName }}
     </a>
   </small>
 </div>
@@ -101,11 +110,13 @@
               <i class="fas fa-box me-2"></i>Pull Container
             </a>
           {{ else if $iso }}
-            <a href="{{ $iso.browser_download_url }}" class="btn btn-warning btn-lg w-100 mb-2">
+            {{ $isoUrl := index $iso "browser_download_url" }}
+            <a href="{{ $isoUrl }}" class="btn btn-warning btn-lg w-100 mb-2">
               <i class="fas fa-download me-2"></i>Download ISO
             </a>
-            {{ with $checksum }}
-            <a href="{{ .browser_download_url }}" class="btn btn-outline-secondary w-100">
+            {{ if $checksum }}
+            {{ $checksumUrl := index $checksum "browser_download_url" }}
+            <a href="{{ $checksumUrl }}" class="btn btn-outline-secondary w-100">
               <i class="fas fa-fingerprint me-1"></i>Checksum
             </a>
             {{ end }}
@@ -122,7 +133,8 @@
 </div>
 
 {{/* Release notes (collapsible) */}}
-{{ with $latest.body }}
+{{ $body := index $latest "body" }}
+{{ with $body }}
 <details class="mb-4">
   <summary class="h6" style="cursor: pointer;"><i class="fas fa-file-alt me-2"></i>Release Notes</summary>
   <div class="p-3 mt-2 rounded-3" style="background: var(--card-bg); border: 1px solid var(--card-border);">
@@ -135,14 +147,16 @@
 <div class="px-3 py-2 rounded-3 mb-4" style="background: var(--bg-secondary); border: 1px solid var(--border-color);">
   <small>
     <strong>All Downloads:</strong>
-    {{ range $latest.assets }}
-      <a href="{{ .browser_download_url }}" class="ms-3 text-decoration-none">
-        {{ if hasSuffix .name ".iso" }}<i class="fas fa-compact-disc me-1"></i>
-        {{ else if hasSuffix .name "SHA256SUMS" }}<i class="fas fa-fingerprint me-1"></i>
-        {{ else if hasSuffix .name ".asc" }}<i class="fas fa-key me-1"></i>
-        {{ else if hasSuffix .name ".pub" }}<i class="fas fa-key me-1"></i>
+    {{ range $latestAssets }}
+      {{ $name := index . "name" }}
+      {{ $url := index . "browser_download_url" }}
+      <a href="{{ $url }}" class="ms-3 text-decoration-none">
+        {{ if hasSuffix $name ".iso" }}<i class="fas fa-compact-disc me-1"></i>
+        {{ else if hasSuffix $name "SHA256SUMS" }}<i class="fas fa-fingerprint me-1"></i>
+        {{ else if hasSuffix $name ".asc" }}<i class="fas fa-key me-1"></i>
+        {{ else if hasSuffix $name ".pub" }}<i class="fas fa-key me-1"></i>
         {{ else }}<i class="fas fa-file me-1"></i>{{ end }}
-        {{ .name }}
+        {{ $name }}
       </a>
     {{ end }}
   </small>
