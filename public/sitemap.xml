@@ -2,58 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nubiferos.org/docs/getting-started/installation/</loc>
+    <loc>http://localhost:1313/docs/getting-started/installation/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/getting-started/quick-start/</loc>
+    <loc>http://localhost:1313/docs/getting-started/quick-start/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/getting-started/first-workspace/</loc>
+    <loc>http://localhost:1313/docs/getting-started/first-workspace/</loc>
   </url><url>
-    <loc>https://nubiferos.org/download/</loc>
+    <loc>http://localhost:1313/download/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/getting-started/</loc>
+    <loc>http://localhost:1313/docs/getting-started/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/security/threat-model/</loc>
+    <loc>http://localhost:1313/docs/security/threat-model/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/reference/tools/</loc>
+    <loc>http://localhost:1313/docs/reference/tools/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/user-guide/workspaces/</loc>
+    <loc>http://localhost:1313/docs/user-guide/workspaces/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/security/disk-encryption/</loc>
+    <loc>http://localhost:1313/docs/security/disk-encryption/</loc>
   </url><url>
-    <loc>https://nubiferos.org/features/</loc>
+    <loc>http://localhost:1313/features/</loc>
   </url><url>
-    <loc>https://nubiferos.org/nubiferai/</loc>
+    <loc>http://localhost:1313/nubiferai/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/security/credential-security/</loc>
+    <loc>http://localhost:1313/docs/security/credential-security/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/user-guide/credentials/</loc>
+    <loc>http://localhost:1313/docs/user-guide/credentials/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/user-guide/</loc>
+    <loc>http://localhost:1313/docs/user-guide/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/nubiferai/</loc>
+    <loc>http://localhost:1313/docs/nubiferai/</loc>
   </url><url>
-    <loc>https://nubiferos.org/security/</loc>
+    <loc>http://localhost:1313/security/</loc>
   </url><url>
-    <loc>https://nubiferos.org/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/security/</loc>
+    <loc>http://localhost:1313/docs/security/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/security/workspace-isolation/</loc>
+    <loc>http://localhost:1313/docs/security/workspace-isolation/</loc>
   </url><url>
-    <loc>https://nubiferos.org/why-nubiferos/</loc>
+    <loc>http://localhost:1313/why-nubiferos/</loc>
   </url><url>
-    <loc>https://nubiferos.org/built-with-ai/</loc>
+    <loc>http://localhost:1313/built-with-ai/</loc>
   </url><url>
-    <loc>https://nubiferos.org/community/</loc>
+    <loc>http://localhost:1313/community/</loc>
   </url><url>
-    <loc>https://nubiferos.org/docs/reference/</loc>
+    <loc>http://localhost:1313/docs/reference/</loc>
   </url><url>
-    <loc>https://nubiferos.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://nubiferos.org/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://nubiferos.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

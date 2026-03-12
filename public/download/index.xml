@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Download NubiferOS on NubiferOS</title>
-    <link>https://nubiferos.org/download/</link>
+    <link>http://localhost:1313/download/</link>
     <description>Recent content in Download NubiferOS on NubiferOS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://nubiferos.org/download/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/download/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

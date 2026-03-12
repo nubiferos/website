@@ -65,7 +65,7 @@ defaultContentLanguageInSubdir = false
       desc = "Source code and issues"
     [[params.links.user]]
       name = "Discord"
-      url = "https://discord.gg/nubiferos"
+      url = "https://discord.gg/s5CJEmyvg6"
       icon = "fab fa-discord"
       desc = "Chat with the community"
 
