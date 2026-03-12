@@ -105,6 +105,10 @@ gpg --verify *.iso.asc *.iso
 
 [Full Installation Guide →](/docs/getting-started/installation/)
 
+{{% alert title="Running into issues?" color="info" %}}
+Check the [Known Issues](/docs/getting-started/known-issues/) page and [Troubleshooting Guide](/docs/getting-started/installation/#troubleshooting) for common problems and solutions.
+{{% /alert %}}
+
 ---
 
 ## Previous Releases
