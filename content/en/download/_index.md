@@ -80,7 +80,7 @@ sha256sum -c SHA256SUMS
 
 Expected output:
 ```
-NubiferOS-0.1.0-20260310-a65efef-amd64.iso: OK
+NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso: OK
 ```
 
 ### Verify GPG Signature (Optional)
@@ -115,7 +115,8 @@ Check the [Known Issues](/docs/getting-started/known-issues/) page and [Troubles
 
 | Version | Release Date | Status | Notes |
 |---------|--------------|--------|-------|
-| 0.1.1 | March 2026 | Current | CI/CD pipeline, container image, OTA updates |
+| 0.1.2 | March 2026 | Current | Audit trail viewer, security dashboard, APT repo signing, bug fixes |
+| 0.1.1 | March 2026 | Previous | CI/CD pipeline, container image, OTA updates |
 
 ---
 

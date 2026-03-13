@@ -29,7 +29,7 @@
 
   <meta itemprop="name" content="Download NubiferOS">
   <meta itemprop="description" content="Get NubiferOS Alpha and start managing your cloud accounts securely">
-  <meta itemprop="wordCount" content="616">
+  <meta itemprop="wordCount" content="722">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Download NubiferOS">
   <meta name="twitter:description" content="Get NubiferOS Alpha and start managing your cloud accounts securely">
@@ -263,13 +263,13 @@
 
 <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
   <div>
-    <span class="h5 mb-0">NubiferOS 0.1.1</span>
+    <span class="h5 mb-0">NubiferOS 0.1.2</span>
     <span class="badge bg-warning text-dark ms-2">Alpha</span>
   </div>
   <small class="text-muted">
-    <i class="fas fa-calendar me-1"></i>March 11, 2026
-    <a href="https://github.com/nubiferos/nubiferos/releases/tag/v0.1.1" class="ms-2">
-      <i class="fas fa-external-link-alt"></i> v0.1.1
+    <i class="fas fa-calendar me-1"></i>March 12, 2026
+    <a href="https://github.com/nubiferos/nubiferos/releases/tag/v0.1.2" class="ms-2">
+      <i class="fas fa-external-link-alt"></i> v0.1.2
     </a>
   </small>
 </div>
@@ -319,12 +319,12 @@
         <div class="w-100">
           
             
-            <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/NubiferOS-0.1.0-20260310-a65efef-amd64.iso" class="btn btn-warning btn-lg w-100 mb-2">
+            <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso" class="btn btn-warning btn-lg w-100 mb-2">
               <i class="fas fa-download me-2"></i>Download ISO
             </a>
             
             
-            <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/SHA256SUMS" class="btn btn-outline-secondary w-100">
+            <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/SHA256SUMS" class="btn btn-outline-secondary w-100">
               <i class="fas fa-fingerprint me-1"></i>Checksum
             </a>
             
@@ -436,22 +436,29 @@
 <details class="mb-4">
   <summary class="h6" style="cursor: pointer;"><i class="fas fa-file-alt me-2"></i>Release Notes</summary>
   <div class="p-3 mt-2 rounded-3" style="background: var(--card-bg); border: 1px solid var(--card-border);">
-    <h2 id="nubiferos-011">NubiferOS 0.1.1</h2>
+    <h2 id="nubiferos-012">NubiferOS 0.1.2</h2>
 <p>A security-focused Linux distribution for cloud engineers.</p>
 <h3 id="changes">Changes</h3>
 <ul>
-<li>feat: split CI/CD into 3-stage pipeline (build → test → release)</li>
-<li>feat: add Docker container image for NubiferOS cloud tools</li>
-<li>feat: add nubifer-ai .deb package for OTA NubiferAI updates</li>
-<li>fix: CLI read-only wrappers and context manager critical bugs</li>
-<li>fix: reset versioning to 0.1.0 for alpha phase</li>
-<li>feat: add needrestart/kexec for fast kernel reboots</li>
-<li>feat: add nubifer-security and nubifer-branding packages, complete OTA coverage</li>
-<li>feat: bake APT signing key and update service into ISO build</li>
-<li>feat: add APT package repo for OTA updates, split release workflow</li>
-<li>feat: add NubiferAI installer, fix Firefox bookmark policies</li>
-<li>fix: patch packagechooser config and make installer fullscreen</li>
-<li>fix: remove packagechooser module causing Calamares segfault</li>
+<li>fix: lower ISO size test threshold from 1.0GB to 0.5GB</li>
+<li>feat: compact security dashboard layout for single-screen viewing</li>
+<li>feat: taller detail panel in audit viewer, add to GNOME dock favorites</li>
+<li>fix: remove duplicate APT publish from ISO workflow, fix package versioning</li>
+<li>feat: add signed APT repo publishing to CI pipeline</li>
+<li>feat: bump to 0.1.3 — audit viewer, apt-mark manual for nubifer packages</li>
+<li>feat: add GTK3 Audit Trail Viewer for visual cloud command history</li>
+<li>fix: nubifer-branding dpkg conflict with base-files on /etc/issue</li>
+<li>chore: bump version to 0.1.2 for OTA delivery of recent fixes</li>
+<li>fix: Trivy APT repo uses NubiferOS codename instead of Debian codename</li>
+<li>fix: remove GNOME Keyring dependency from token cache — use encrypted files only</li>
+<li>fix: pre-warm GPG agent in aws wrapper to prevent credential_process hang</li>
+<li>chore: add autonomy permissions to CLAUDE.md for faster workflow</li>
+<li>fix: kernel CVEs, lynis dep, dashboard workspace &amp; update tracking</li>
+<li>fix: 3 dashboard/packaging bugs — lynis, workspace display, update tracking</li>
+<li>fix: OTA update pipeline — GPG dearmoring, dpkg registration, CDN cache</li>
+<li>fix: add amd64 architecture to APT repo so packages are discoverable</li>
+<li>fix: resolve AWS CLI hang caused by GPG decryption in wrapper</li>
+<li>feat: add CLI audit trail — local cloud command history</li>
 </ul>
   </div>
 </details>
@@ -464,23 +471,23 @@
     
       
       
-      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/NubiferOS-0.1.0-20260310-a65efef-amd64.iso" class="ms-3 text-decoration-none">
+      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso" class="ms-3 text-decoration-none">
         <i class="fas fa-compact-disc me-1"></i>
         
-        NubiferOS-0.1.0-20260310-a65efef-amd64.iso
+        NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso
       </a>
     
       
       
-      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/NubiferOS-0.1.0-20260310-a65efef-amd64.iso.asc" class="ms-3 text-decoration-none">
+      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso.asc" class="ms-3 text-decoration-none">
         <i class="fas fa-key me-1"></i>
         
-        NubiferOS-0.1.0-20260310-a65efef-amd64.iso.asc
+        NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso.asc
       </a>
     
       
       
-      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/nubiferos-signing-key.pub" class="ms-3 text-decoration-none">
+      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/nubiferos-signing-key.pub" class="ms-3 text-decoration-none">
         <i class="fas fa-key me-1"></i>
         
         nubiferos-signing-key.pub
@@ -488,7 +495,7 @@
     
       
       
-      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.1/SHA256SUMS" class="ms-3 text-decoration-none">
+      <a href="https://github.com/nubiferos/nubiferos/releases/download/v0.1.2/SHA256SUMS" class="ms-3 text-decoration-none">
         <i class="fas fa-fingerprint me-1"></i>
         
         SHA256SUMS
@@ -606,7 +613,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/Downloads
 </span></span><span style="display:flex;"><span>sha256sum -c SHA256SUMS
 </span></span></code></pre></div><p>Expected output:</p>
-<pre tabindex="0"><code>NubiferOS-0.1.0-20260310-a65efef-amd64.iso: OK
+<pre tabindex="0"><code>NubiferOS-0.1.4-20260312-8d25dfd-amd64.iso: OK
 </code></pre><h3 id="verify-gpg-signature-optional">Verify GPG Signature (Optional)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Import the NubiferOS signing key</span>
 </span></span><span style="display:flex;"><span>gpg --import nubiferos-signing-key.pub
@@ -645,9 +652,15 @@
   </thead>
   <tbody>
       <tr>
-          <td>0.1.1</td>
+          <td>0.1.2</td>
           <td>March 2026</td>
           <td>Current</td>
+          <td>Audit trail viewer, security dashboard, APT repo signing, bug fixes</td>
+      </tr>
+      <tr>
+          <td>0.1.1</td>
+          <td>March 2026</td>
+          <td>Previous</td>
           <td>CI/CD pipeline, container image, OTA updates</td>
       </tr>
   </tbody>
