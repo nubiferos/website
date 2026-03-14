@@ -12,6 +12,10 @@ The secure cloud engineer's workstation with workspace isolation, encrypted cred
 This is alpha software intended for testing and feedback. Expect bugs and rough edges. Please [report issues on GitHub](https://github.com/nubiferos/nubiferos/issues).
 {{% /alert %}}
 
+{{% alert title="Running into issues?" color="info" %}}
+Check the [Known Issues](/docs/getting-started/known-issues/) page and [Troubleshooting Guide](/docs/getting-started/installation/#troubleshooting) for common problems and solutions.
+{{% /alert %}}
+
 ---
 
 ## Choose Your Edition
@@ -104,10 +108,6 @@ gpg --verify *.iso.asc *.iso
 5. **Reboot** and enter your LUKS passphrase
 
 [Full Installation Guide →](/docs/getting-started/installation/)
-
-{{% alert title="Running into issues?" color="info" %}}
-Check the [Known Issues](/docs/getting-started/known-issues/) page and [Troubleshooting Guide](/docs/getting-started/installation/#troubleshooting) for common problems and solutions.
-{{% /alert %}}
 
 ---
 
