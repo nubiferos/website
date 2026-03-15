@@ -68,6 +68,28 @@ This can appear as if the bootloader is broken, but the system is actually worki
 
 *No issues reported yet.*
 
+## Updates
+
+### APT Update Fails with "Hash Sum Mismatch"
+
+**Error:** `sudo apt update` fails with a hash sum mismatch error for the NubiferOS package repository.
+
+```
+E: Failed to fetch https://packages.nubiferos.org/dists/nubiferos/main/binary-amd64/Packages.gz
+   Hash Sum mismatch
+```
+
+This happens when the APT repository's `Release` file and `Packages.gz` are temporarily out of sync due to CDN caching. After a new package version is published, CloudFront may serve the updated `Packages.gz` but still have the old `Release` file cached (or vice versa).
+
+**Fix:** Wait a few minutes for the CDN cache to expire (up to 5 minutes), then clear your local APT cache and retry:
+
+```bash
+sudo apt clean
+sudo apt update
+```
+
+**Why:** The NubiferOS package repository is served through CloudFront with a 5-minute cache TTL. When new packages are published, there is a brief window where the cached metadata files can be out of sync. Clearing the local APT cache ensures a fresh download of all repository metadata.
+
 ## Other
 
 *No issues reported yet.*
